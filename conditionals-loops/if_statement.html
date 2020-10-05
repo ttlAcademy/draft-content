@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if statement</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://ttlacademy.github.io/assets/prism2.js"></script>
+    <link href="https://ttlacademy.github.io/assets/prism2.css" rel="stylesheet">
+</head>
+
+<body class = "m-8">
+    <p>Decision making is one of the important topics in software flow control. Some codes should be executed only when
+        a particular condition or conditions are met. One of the statements used in Python is <code>if-else</code>
+        block.</p>
+
+    <h2>If Statement Block</h2>
+    <p>First, let's start with a single <code>if</code> statement. Unless we tell the application, our code normally
+        flows from left to right and top to bottom. During the flow, we want our code whether to choose or not a certain
+        direction. The form of <code>if</code> is presented below.</p>
+
+    <pre class="line-numbers"><code class="language-python">if expression:
+    statement
+</code></pre>
+
+    <p>please pay attention colon <code>:</code> after if expression. It shows us this is a block and after this colon
+        following code belongs to this block. Then notice the indentation. Statement inside <code>if</code> block starts
+        with indentation (normally 4 space 1 indentation). if we draw <code>if</code> statement as a flow chart, it
+        would be:</p>
+
+    <img src="https://www.ttl.academy/wp-content/uploads/2020/10/single-if.svg" alt="single-if" />
+
+    <p>For example: Imagine we visit a cinema and want to buy a ticket for a film. Cinema has a policy. Only over 15
+        years old can enter all films without restriction.</p>
+
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">your_age = 14
+if your_age > 15:
+    print('you can enter all films')
+print('Rest of the code')
+</code></pre>
+
+    <p>and when you run the program output will be:</p>
+
+    <pre><code class="language-python">Rest of the code
+</code></pre>
+
+    <p>Because <code>your_age</code> variable is less than 15, our if expression returns <code>False</code> and our code
+        inside if block doesn't work. We cannot see <code>print('you can enter all films')</code> output on our screen.
+        Now let's change the variable value from 14 to 18</p>
+
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">your_age = 18
+if your_age > 15:
+    print('you can enter all films')
+print('Rest of the code')
+</code></pre>
+
+    <p>Now we can see the code inside if block executed.</p>
+
+    <pre style="margin-bottom: 30px"><code class="language-python">you can enter all films
+Rest of the code
+</code></pre>
+
+    <h2>If-else Statement Block</h2>
+    <p>Our previous example our little cinema program only execute when the condition is <code>True</code>. But what if
+        we want our program to do something else when the condition isn't satisfied? Python has <code>else</code>
+        statement. When the <code>if</code> statement is <code>False</code>, then the code inside <code>else</code> is
+        executed. The form of <code>if - else</code> is presented below.</p>
+
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">if expression:
+    statement for if
+else:
+    statement for else
+</code></pre>
+
+    <p>and <code>if - else</code> statement as a flow would be:</p>
+
+    <img src="https://www.ttl.academy/wp-content/uploads/2020/10/if-else.svg" alt="if-else.svg"
+        style="border: 2px solid #000000;" />
+
+    <p>Improving our cinema example: According to cinema policy, we also print "you can not enter PEGI 16+ films" to the
+        screen if <code>your_age</code> variable is not greater 15.</p>
+
+    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">your_age = 18
+if your_age > 15:
+    print('you can enter all films')
+else:
+    print('you cannot enter PEGI 16+ films')
+print('Rest of the code')
+</code></pre>
+
+    <p>and when you run the program output will be:</p>
+
+    <pre><code class="language-py">you can enter all films
+Rest of the code
+</code></pre>
+
+    <p>Now write this code to your editor and change the variable value from 18 to 10. Run code and see
+        <code>else</code> statement is executed.</p>
+</body>
+
+</html>

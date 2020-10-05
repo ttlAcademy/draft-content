@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>python executables</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://ttlacademy.github.io/assets/prism2.js"></script>
+    <link href="https://ttlacademy.github.io/assets/prism2.css" rel="stylesheet">
+</head>
+
+<body class="m-8">
+    <link href="https://ttlacademy.github.io/assets/prism2.css" rel="stylesheet">
+
+    <p> So far we have used Python interpreter (command line or Python Shell) to execute our codes. As we progress and
+        learn new things it is obvious we need to write and execute multiline codes and for that point, the Python
+        Executable files with extensions of ".py" come in handy.</p>
+
+    <p>Till this lesson, you might have used Python Interpreter. You should notice Python Interpreter is not a
+        convenient way of coding. That is why we are using the code editor. You may use any code editor you wish. I am
+        going to use VS Code which is one of the coolest Open Source code editors in the market, it can be used as a
+        cross-platform in any OS and it is easy to use for beginners.</p>
+
+    <p>Before begin please make sure you below prerequisites installed and ready to use for the following topics.</p>
+
+    <h2>Prerequisites</h2>
+    <ul>
+        <li>Python 3</li>
+        <li>VS Code</li>
+        <li>VS Code Python Extension published by Microsoft</li>
+    </ul>
+
+    I will give you a short walkthrough with VS Code however I must remind you again to check our two free courses to
+    set up your environment for Python with a detailed explanation.</p>
+
+    <ul>
+        <li><span style="color: #0000ff;"><a style="color: #0000ff;"
+                    href="https://www.ttl.academy/courses/set-up-python-on-pc" target="_blank"
+                    rel="noopener noreferrer">Set-up Python on PC</a></span></li>
+        <li><span style="color: #0000ff;"><a style="color: #0000ff;"
+                    href="https://www.ttl.academy/courses/set-up-vs-code-on-pc" target="_blank"
+                    rel="noopener noreferrer">Set-up VS Code on PC</a></span></li>
+    </ul>
+
+    <p>The coolest thing about code editors: They do a lot of stuff for us like auto-completion (code IntelliSense),
+        sample-ready to use code (boilerplate), color the keywords, etc! In ttl.academy we colored some of the code
+        snippets for your convenience but in real Python console, everything was the same color; When you use the code
+        editors you should see different colors. This is called "syntax highlighting", and it's really useful for code
+        readability. Each different object such as function, strings, comments has different colors so this will allow
+        you to read, track and debug your code, and if something goes wrong you get a clue because of the warning
+        message from editors such as unclosed strings or a typo in a keyword name. All in all coding with editors is
+        very useful and efficient.
+
+    <p>The best way to keep our code files for Python is to store them in a separate folder per each project. So create
+        a folder in your PC for your project and give it a name for example "my_project". If you use Windows you may use
+        normal file explorer and create a new folder under a drive for example <em>"C:\my_project"</em> </p>
+
+    <p>or you may use <em>"Windows PowerShell"</em> to create a new folder</p>
+    <pre style="margin-bottom: 30px; background:rgb(1, 36, 86); color:#ffffff;"><code>PS C:\> mkdir my_project
+PS C:\> cd my_project
+</code></pre>
+
+    <p>In Linux, you may create your project file under your home directory. First, go to your home directory using the
+        tilde character and then create your directory.</p>
+
+    <pre style="margin-bottom: 30px"><code class="language-bash">your_user@yourPC:/$ cd ~
+your_user@yourPC:~$ mkdir my_project
+</code></pre>
+
+    <p>and go to your new directory.</p>
+    <pre style="margin-bottom: 30px"><code class="language-bash">your_user@yourPC:~$ cd my_project
+</code></pre>
+
+    <p> If you haven't installed VS Code go to <a href="https://code.visualstudio.com" rel="noopener noreferrer"
+            target="_blank" style="color: #0000ff; text-decoration: underline !important;">VS Code website</a> and
+        install it. After installing your editor you need to install <a
+            href="https://marketplace.visualstudio.com/items?itemName=ms-python.python" rel="noopener noreferrer"
+            target="_blank" style="color: #0000ff; text-decoration: underline !important;">Python extension</a> for
+        linting and code intelliSense. Open your VS Code. You may write "code ." to your command line. This works both
+        for LinuxShell and PowerShell.</p>
+
+    <pre style="margin-bottom: 30px"><code class="language-shell">your_user@yourPC:~/my_project$ code .
+</code></pre>
+    <code>Alternately, you can run VS Code through the operating system UI, then use File &gt; Open Folder to open the project folder.</code>
+
+    <p>By starting VS Code in a folder, that folder becomes your "workspace"</p>
+
+    <h2>Create Your First Python Executable File</h2>
+
+    <p>From the File Explorer toolbar, select the New File button on the hello folder:</p>
+    <img src="https://www.ttl.academy/wp-content/uploads/2020/09/VSCode_Create_File.jpg" alt="VSCode_Create_File" />
+
+    <p>Name the file giving it a descriptive name like &lt;descriptive_name.py&gt; and it automatically opens in the
+        editor. Let's name the file <em>write_my_full_name.py</em> and save it. We can name the file whatever we want
+        just to make sure the file ends in .py. The .py extension tells our Python (if it is installed in our OS) that
+        this is a Python executable file and Python can run it.</p>
+
+    <img src="https://www.ttl.academy/wp-content/uploads/2020/09/VSCode_Open_File.jpg" alt="VSCode_Open_File" />
+
+    <p>Now that you have a code file in your Workspace, enter the following source code in write_my_full_name.py:</p>
+
+    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">first_name = input("Please enter first name: ")
+last_name = input("Please enter surname name: ")
+my_fullname = f"Your ful name is: {first_name} {last_name}"
+print (my_fullname)
+my_upper_case_name = my_fullname.upper()
+print (my_upper_case_name)
+</code></pre>
+
+    <p>You should be familiar with this code since so far we have covered these topics except line 3. On line 3, we are
+        using a new way of string formatting for Python. It is similar to normal string but we use the "f" letter before
+        the quotation. We can use our variables between open and close curly braces "{}". That is a place holder for any
+        Python object inside a string. When you start typing your code, you may notice how VS Code IntelliSense offers
+        auto-completion options.</p>
+
+    <img src="https://www.ttl.academy/wp-content/uploads/2020/09/VSCode_IntelliSense.jpg" alt="VSCode_IntelliSense" />
+
+    <h2 style="margin-top:50px;">Run write _full_name.py</h2>
+
+    <p>It's very easy to run our code with Python. Just click the "Run Python File in Terminal" button located on the
+        top-right side of the editor.</p>
+
+    <img src="https://www.ttl.academy/wp-content/uploads/2020/09/VSCode_run_python_file01.jpg"
+        alt="VSCode_run_python_file01" />
+
+    <p>When you run your code, VS Code automatically save your file and open the terminal panel. The terminal panel will
+        execute the write_my_full_name.py. The python command will run for Linux/macOS: "python3 hello.py" and for
+        Windows: "python write_my_full_name.py.</p>
+
+    <img src="https://www.ttl.academy/wp-content/uploads/2020/09/VSCode_run_python_file02.jpg"
+        alt="VSCode_run_python_file02" />
+
+    <p>Congragulations you have written your first Python Executable files with VS Code.</p>
+
+    <h2>Next steps</h2>
+    <p>You can configure VS Code to use any Python environment; you may use web frameworks such as Flask, Django, you
+        may create your virtual environment, and also you may create your test environment. Although all these things
+        out of the scope of this course you have already moved forward to the next steps. Moreover, in near future, you
+        will find more related advanced topics in ttl.academy. We would like to ask you to stay tuned and follow us.</p>
+
+</body>
+
+</html>
