@@ -11,14 +11,50 @@
 <body class = "m-8">
     <div>
         <h2>For Loop</h2>
-        <p>For loop is one of iteration method in python</p>
-    
+        <p>For loop is one of iteration method in python that is used to repeat blocks of code.</p>
         <div>
-<pre class="line-numbers"><code class="language-python">if expression: 
-    statement
-</code></pre>
-        </div>
+        
+        <p>Below is the basic syntax of <code>for</code> loop:</p>
 
+<pre class="line-number" style="margin-bottom: 30px"><code class="language-python">for var in sequence:
+    statement(s)</code></pre>
+
+        <p>Var is the variable that is used temporarily as a container to store the value of the sequence when the loops occur. 
+            The sequence is a type of sequential data such as string, list and tuple. The loops occur until it reaches the last element or list of sequence.</p><br>
+
+        <p>Here is the flow diagram of <code>for</code>: </p>
+
+        <img src="https://user-images.githubusercontent.com/46647106/95082438-4a7ab800-071b-11eb-9a9f-b03c5be41e43.jpg" alt="for-flow-diagram.jpg" style="border: 2px solid #000000;">
+        <br>
+        <p>To loop over a list or any other collection, you can see the following example:</p>
+
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">number = [1,2,3,4,5]
+for x in number:
+    print(x)</code></pre>
+        <p>The number collection contains five numbers. The loop will iterate over the collection and store each number in <code>x</code> variable and then execute the statement to print each number in the console.</p>
+        
+        <p>When you run the code above, the output will be:</p>
+
+<pre class="language-py"><code class="language-python">1
+2
+3
+4
+5</code></pre><br>
+            <div>
+                <h2>Range() Function</h2>
+        
+                <p>You can also use for with <code>range</code> function to give you a simple way to list numbers following one after the other as the example below:</p>
+
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">for x in range (1,5):
+    print ("This is list number", x)</code></pre>
+                <p>The output will be:</p>
+<pre><code class="language-py">This is list number 1
+This is list number 2
+This is list number 3
+This is list number 4 </code></pre>
+                 <p>You need to note that the range is counted from 1 to 4 and number 5 is not included in the list that is output by python. It means that it includes the first value, but not the last value.</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
