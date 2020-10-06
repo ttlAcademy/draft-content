@@ -27,35 +27,27 @@
 
             <img src="https://user-images.githubusercontent.com/46647106/95082438-4a7ab800-071b-11eb-9a9f-b03c5be41e43.jpg" alt="for-flow-diagram.jpg">
             <br>
-            <p>To loop over a list or any other collection, you can see the following example:</p>
-
-<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">number = [1,2,3,4,5]
-for x in number:
-    print(x)</code></pre>
-            <p>The number collection contains five numbers. The loop will iterate over the collection and store each number in <code>x</code> variable and then execute the statement to print each number in the console.</p>
-        
-            <p>When you run the code above, the output will be:</p>
-
-<pre class="language-py"><code class="language-python">1
-2
-3
-4
-5</code></pre><br>
         <div>
             <h2>Range() Function</h2>
         
-            <p>You can also use for with <code>range</code> function to give you a simple way to list numbers following one after the other as the example below:</p>
+            <p>If you want to list specific numbers, using <code>range()</code> function is very useful. <code>Range()</code> function gives you a simple way to list numbers, following one after the other. For example, you want to show a list of number from 1 to 10, then you can run the following code:</p>
 
-<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">for x in range (1,5):
-    print ("This is list number", x)</code></pre>
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">for i in range (1,11):
+    print ('number', i)</code></pre>
             
-            <p>The output will be:</p>
-<pre><code class="language-python">This is list number 1
-This is list number 2
-This is list number 3
-This is list number 4 </code></pre>
+            <p>when you run the code above, you will see the output below:</p>
+<pre><code class="language-python">number 1
+number 2
+number 3
+number 4
+number 5
+number 6
+number 7
+number 8
+number 9
+number 10</code></pre>
             
-            <p>You need to note that the range is counted from 1 to 4 and number 5 is not included in the list that is output by python. It means that it includes the first value, but not the last value.</p>
+            <p>The <code>range()</code> function shows values from 1 to 10 and 11 is not included in the output. It means that it includes the first value, but not the last value. </p>
         </div>
         </div>
     </div>
