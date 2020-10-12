@@ -11,7 +11,7 @@
 <body class = "m-8">
     <div>
         <h2>While Loop</h2>
-        <p>Another iteration method used in python is <code>while</code> loop. Using the while loop is the most effective way when you don’t know the number of iterations. This function executes a part of the code until the given condition returns false.</p>
+        <p>Another iteration method used in python is <code>while</code> loop. It’s like the <code>for</code> loop, used for repeating block of code but the <code>while</code> loop executes the code until the given condition returns false.</p>
         
         <div>
             <br>
@@ -20,7 +20,7 @@
 <pre class="line-number" style="margin-bottom: 30px"><code class="language-python">while expression:
     statement(s)</code></pre>
 
-            <p>statement(s) may be a single statement or a block of statements. The condition may be any expression and true is any non-zero value. The loop iterates while the condition is true. When the condition becomes false, program control passes to the line immediately following the loop.</p><br>
+            <p>statement(s) may be a single statement or a block of statements. The condition may be any expression and true is any non-zero value. The loop iterates while the condition is true. When the condition is false, the program comes out and stops the loop.</p><br>
 
             <p><code>while</code> loop flow diagram: </p><br>
 
@@ -29,10 +29,15 @@
             <p>Let’s see the given example below to understand it better:</p>
 <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">i = 1
 while i<=5:
-    print("This is while loop example")
+    print("Hello, Belgium!")
     i=i+1</code></pre>
-            <p>The program first executes the <code>while</code> loop condition. If the condition is true, the program enters the loop and print the output. It continues to print the output until the condition is false. When it is false, the program comes out and stops the loop.</p>
-
+            <p>The program first executes the <code>while</code> loop condition. If the condition is true, the program enters the loop and print the output. It continues to print the output until the condition is false.</p>
+            <p>The output:</p>
+<pre><code class="language-python">Hello, Belgium!
+Hello, Belgium!
+Hello, Belgium!
+Hello, Belgium!
+Hello, Belgium!</code></pre>
         <div>
             <br>
             <h2>Infinite <code>while</code> loop</h2>
@@ -47,77 +52,13 @@ while i<=5:
 Stop me if you can
 Stop me if you can
 Stop me if you can
+...
+...
+...
 Stop me if you can
 Stop me if you can
-...</code></pre>
-<p>You can enter CTRL+C to interrupt the execution of the code.</p><br>
-            <h2>Range() Function</h2>
-        
-            <p>If you want to list specific numbers, using <code>range()</code> function is very useful. <code>Range()</code> function gives you a simple way to list numbers, following one after the other. For example, you want to show a list of number from 1 to 10, then you can run the following code:</p>
-
-<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">for i in range (1,11):
-    print ('number', i)</code></pre>
-            
-            <p>When you run the code above, you will see this output:</p>
-
-<pre><code class="language-python">number 1
-number 2
-number 3
-number 4
-number 5
-number 6
-number 7
-number 8
-number 9
-number 10</code></pre>
-            
-            <p>The <code>range()</code> function shows values from 1 to 10 and 11 is not part of the output, even though the function input was <code>range(1,11)</code>. It means that this function returns the first value, but not the last value. </p>
-            <br>
-            <h2>Break Statement</h2>
-        
-            <p>With the <code>break</code> statement, you can terminate or stop the loop when a condition is triggered. Here is an example:</p>
-
-<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">for i in range (1,11):
-    if i == 7:
-        break
-    print ('number', i)
-</code></pre>
-            
-            <p>When you run the program, then the output will be:</p>
-<pre><code class="language-python">number 1
-number 2
-number 3
-number 4
-number 5
-number 6</code></pre>
-            
-            <p>To help you understand better, we'll give you another example of this function: </p>
-<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">country = 'Belgium'
-for i in country:
-    if i == 'g':
-        break
-    print('Give me :', i)</code></pre>
-            <p>From the example above, you can see that inside the <code>for</code> loop, there is an <code>if</code> statement that has a condtion that if the variable <code>i</code> is equivalent to the letter 'g', then the loop will break.</p>
-            <p>What will the output be? Here you go:</p>
-<pre><code class="language-python">Give me : B
-Give me : e
-Give me : l</code></pre>
-            <br>
-            <h2>Continue Statement</h2>
-            <p>There is also another statement called <code>continue</code> statement that is used to skip over the part of a loop where a condition inside the <code>for</code> loop is triggered. Here is the example of using the <code>continue</code> statement:</p>
-<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">country = ‘Belgium’
-for i in country:
-    if i == 'g':
-        continue
-    print('Give me:', i )</code></pre>
-            <p>Running the code above will give you this output:</p>
-<pre><code class="language-python">Give me: B
-Give me: e
-Give me: l
-Give me: i
-Give me: u
-Give me: m</code></pre>
-            <p>The letter ‘g’ is not printed because the program hits continue statement when <code>i=g</code>. That’s why the line <code>print('Give me:', i )</code> isn’t run when <code>i='g'</code>, but it starts back up at the start of the loop with the next letter which is the letter ‘i’</p>
+Stop me if you can</code></pre>
+            <p>You can enter CTRL+C to interrupt the execution of the code.</p><br>
         </div>
         </div>
     </div>
