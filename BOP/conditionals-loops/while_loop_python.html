@@ -59,6 +59,56 @@ Stop me if you can
 Stop me if you can
 Stop me if you can</code></pre>
             <p>You can enter CTRL+C to interrupt the execution of the code.</p><br>
+            <h2>The else statement with the <code>while</code> loop</h2>
+            <p>When you use the else statement with a while loop, the else statement is executed when the condition becomes false.</p>
+            <p>For example:</p>
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">i = 1
+while i<=5:
+    print("Hello, Belgium!")
+    i+=1
+else:
+    print("Bye, Belgium!")</code></pre>
+            <p>When you execute the code above, you will the following result:</p>
+<pre><code class="language-python">Hello, Belgium!
+Hello, Belgium!
+Hello, Belgium!
+Hello, Belgium!
+Hello, Belgium!
+Bye, Belgium!</code></pre>
+
+            <h2>The break statement</h2>
+        
+            <p>Using this statement, you can stop the loop even if the condition is true. Let's see an example below:</p>
+
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">i = 1
+while i<=8:
+    print("Hello, Belgium!")
+    if i == 5:
+        break
+    i+=1</code></pre>
+
+            <p>The loop is terminated when i is 5 as the following output:</p>
+<pre><code class="language-python">Hello, Belgium!
+Hello, Belgium!
+Hello, Belgium!
+Hello, Belgium!
+Hello, Belgium!</code></pre> 
+            <br>
+            <h2>The continue statement</h2>
+            <p>With this statement, you can stop the current iteration and continue with the next if the condition is true.</p>
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">i = 0
+while i<5:
+    i+=1
+    if i == 4:
+        continue
+    print(i, "Hello, Belgium!")</code></pre>
+
+            <p>The output:</p>
+<pre><code class="language-python">1 Hello, Belgium!
+2 Hello, Belgium!
+3 Hello, Belgium!
+5 Hello, Belgium!</code></pre>
+            <p>In the output, the numbers are printed from 1 to 5, except the number 4 as the number 4 is the condition that needed to be skipped and the loop continues with the next number.</p>
         </div>
         </div>
     </div>
