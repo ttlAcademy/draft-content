@@ -14,11 +14,11 @@
         <p>Another iteration method used in python is <code>while</code> loop. Using the while loop is the most effective way when you don’t know the number of iterations. This function executes a part of the code until the given condition returns false.</p>
         
         <div>
-        
-            <p>The basic syntax of while loop is:</p>
+            <br>
+            <p>The basic syntax of while loop:</p>
 
 <pre class="line-number" style="margin-bottom: 30px"><code class="language-python">while expression:
-    statement</code></pre>
+    statement(s)</code></pre>
 
             <p>statement(s) may be a single statement or a block of statements. The condition may be any expression and true is any non-zero value. The loop iterates while the condition is true. When the condition becomes false, program control passes to the line immediately following the loop.</p><br>
 
@@ -29,19 +29,20 @@
         <div>
             <h2>Infinite <code>while</code> loop</h2>
             <p>Infinite loops occur if a condition never becomes false. It makes the control never comes out of the loop.</p>
+            <p>Here is an example:</p>
 
-<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">country = 'Belgium'
-for i in country:
-    print(i)</code></pre>
-            <p>The output is:</p>
-
-<pre><code class="language-python">B
-e
-l
-g
-i
-u
-m</code></pre><br>
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">while True:
+    print("This is infinite loops")</code></pre>
+            <p>When you run the code above, you will see the following output infinitely:</p>
+            
+<pre><code class="language-python">This is infinite loops
+This is infinite loops
+This is infinite loops
+This is infinite loops
+This is infinite loops
+This is infinite loops
+...</code></pre>
+<p>You can enter CTRL+C to interrupt the execution of the code.</p><br>
             <h2>Range() Function</h2>
         
             <p>If you want to list specific numbers, using <code>range()</code> function is very useful. <code>Range()</code> function gives you a simple way to list numbers, following one after the other. For example, you want to show a list of number from 1 to 10, then you can run the following code:</p>
