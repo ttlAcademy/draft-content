@@ -12,4 +12,5 @@
     - [while loop](./BOP/conditionals-loops/while_loop_python.html)
   
   - ### Data-Structures
-    - [lists]
+    - [lists](./BOP/data-structures/lists_arrays.html)
+
