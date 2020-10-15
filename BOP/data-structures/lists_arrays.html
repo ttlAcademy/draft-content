@@ -10,7 +10,7 @@
 </head>
 <body>
     <div>
-        <h2>Python Collections</h2>
+        <h2 class="text-2xl font-bold mt-8 mb-5">Python Collections</h2>
         <p>In python, there are four collections of data type which are:</p>
         <ol class="list-decimal list-inside pl-2">
             <li>List is an ordered collection of objects, accessed by index and mutable/changable</li>
@@ -18,6 +18,37 @@
             <li>Set is an unordered collection of objects, mutable and unindexed</li>
             <li>Dictionary is an unordered collection of objects, mutable and indexed</li>
         </ol>
+        <br>
+        <h2>Lists (arrays)</h2>
+        <p>A list is just like the array which is a sequence of values but more versatile. The list objects don’t need to be in the same data type. It can contain one or more items which are enclosed in the square bracket and use comma to separate items.</p>
+        <p>The basic syntax of the list:</p>
+<pre class="line-number" style="margin-bottom: 30px"><code class="language-python">list = [value1, value2, value3, ..., valueN]</code></pre>
+        <p>To help you understand better, let’s have a look at the following examples:</p><br>
+        <h3>A list of strings</h3>
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
+print(countries)</code></pre>
+        <p>The output:</p>
+<pre><code class="language-python">['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']</code></pre><br>
+        <h3>A list of integers</h3>
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">birthyear= [1985,1986,1988,1989,1999]
+print(birthday)</code></pre>
+        <p>The output:</p>
+<pre><code class="language-python">[1985, 1986, 1988, 1989, 1999]</code></pre><br>
+        <h3>A list of mixed datatypes</h3>
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">thatgirl = [28, 'tall', 1.70, 'programmer', True]
+print(thatgirl)</code></pre>
+        <p>The output:</p>
+<pre><code class="language-python">[28, 'tall', 1.75, 'programmer', True]</code></pre>
+        <p>There are four data type in the mixed list above which are integer (28), string (‘tall’ & ‘programmer’), float (1.75) and True (Boolean)</p><br>
+        
+        <h3>Accessing items in the list by index</h3>
+        <p>You can access each item in a list by referring to the index number in the square brackets. Each item in a list has an assigned index value. The first item of a list is always at index zero as shown below.</p>
+        <img src="https://user-images.githubusercontent.com/46647106/96146917-1b2c2e00-0f07-11eb-9322-49bcb4a50183.png">
+        <p>To be more clear, here is an example:</p>
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
+print("I am from", countries[1], "and I live in", countries[0])</code></pre>
+        <p>When you run the given code above, the output will be:</p>
+<pre><code class="language-python">I am from Indonesia and I live in Belgium</code></pre>
     </div>
 </body>
 </html>
