@@ -87,7 +87,35 @@ print(countries[-4:-1])</code></pre>
 <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
 print(countries[::-1])</code></pre>
         <p>The output:</p>
-<pre><code class="language-python">['Japan', 'Netherland', 'Turkey', 'Indonesia', 'Belgium']</code></pre>
+<pre><code class="language-python">['Japan', 'Netherland', 'Turkey', 'Indonesia', 'Belgium']</code></pre><br>
+        <h3>Change item value</h3>
+        <p>As we mentioned that list is mutable or changeable. It means that you can change items in the list using the assignment operator (=), as an example below:</p>
+        <p>Change the 2nd item:</p>
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
+countries[1] = 'France'
+print(countries)</code></pre>
+        <p>The output:</p>
+<pre><code class="language-python">['Belgium', 'France', 'Turkey', 'Netherland', 'Japan']</code></pre><br>
+        <p>Change 2nd to 4th items:</p>
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
+countries[1:4] = ['France','Spain','Germany']
+print(countries) </code></pre>
+        <p>The output:</p>
+<pre><code class="language-python">['Belgium', 'France', 'Spain', 'Germany', 'Japan']</code></pre><br>
+        <h3>Loop through a list</h3>
+        <p>You can iterate through each item in a list using for loop.</p>
+        <p>Example:</p>
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
+for i in countries:
+    print("I have been to", i)</code></pre>
+        <p>The output:</p>
+<pre><code class="language-python">I have been to Belgium
+I have been to Indonesia
+I have been to Turkey
+I have been to Netherland
+I have been to Japan</code></pre><br>
+
+
     </div>
 </body>
 </html>
