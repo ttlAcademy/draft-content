@@ -107,15 +107,23 @@ print(countries)</code></pre>
         <p>The output:</p>
 <pre><code class="language-python">['Belgium', 'Indonesia', 'Spain', 'Turkey', 'Netherland', 'Japan']</code></pre><br>
 
-        <p>Using <code>append()</code> method to append an element to the end of the list:</p>
+        <p>Using <code>append()</code> method to append list to a list:</p>
 <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
 continents= ['Asia','Africa', 'Europe']
 countries.append(continents)
 print(countries)</code></pre>
         <p>The output:</p>
-<pre><code class="language-python">['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan', ['Asia', 'Africa', 'Europe']]</code></pre><br>       
+<pre><code class="language-python">['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan', ['Asia', 'Africa', 'Europe']]</code></pre><br> 
 
-        <p>Using the <code>extend()</code> method to add all elements of a list to another list:</p>
+        <p>Using <code>append()</code> method to append an item to the end of a list:</p>
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
+countries.append('Asia')
+print(countries)</code></pre>
+        <p>The output:</p>
+<pre><code class="language-python">['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan', 'Asia']</code></pre><br> 
+        
+
+        <p>Using the <code>extend()</code> method to add all elements of list to a list:</p>
 <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
 countries1= ['Singapore','Australia']
 countries.extend(countries1)
