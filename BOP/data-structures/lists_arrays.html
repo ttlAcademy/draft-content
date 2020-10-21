@@ -99,8 +99,63 @@ print(countries[::-1])</code></pre>
 <pre><code class="language-python">['Japan', 'Netherland', 'Turkey', 'Indonesia', 'Belgium']</code></pre>
         <p>The slice statement [::-1] means start at the end of the string and end at position 0, move with the step -1, the negative one, which means one step backwards.</p><br>
 
+        <h3>Add item(s) to a list</h3>
+        <p>Using the <code>insert()</code> method to add an item at the specified index:</p>
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
+countries.insert(2,'Spain')
+print(countries)</code></pre>
+        <p>The output:</p>
+<pre><code class="language-python">['Belgium', 'Indonesia', 'Spain', 'Turkey', 'Netherland', 'Japan']</code></pre><br>
+
+        <p>Using <code>append()</code> method to append an element to the end of the list:</p>
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
+continents= ['Asia','Africa', 'Europe']
+countries.append(continents)
+print(countries)</code></pre>
+        <p>The output:</p>
+<pre><code class="language-python">['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan', ['Asia', 'Africa', 'Europe']]</code></pre><br>       
+
+        <p>Using the <code>extend()</code> method to add all elements of a list to another list:</p>
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
+countries1= ['Singapore','Australia']
+countries.extend(countries1)
+print(countries)</code></pre>
+        <p>The output:</p>
+<pre><code class="language-python">['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan', 'Singapore', 'Australia']</code></pre><br>
+
+        <h3>Remove item(s) from list</h3>
+        <p>There are some methods to remove item(s) from a list, such as these examples below:</p><br>
+        <p>Using <code>remove()</code> method:</p>
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
+countries.remove('Japan')
+print(countries)</code></pre>
+        <p>The output:</p>
+<pre><code class="language-python">['Belgium', 'Indonesia', 'Turkey', 'Netherland']</code></pre><br>
+        <p>Using <code>pop()</code> method:</p>
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
+countries.pop(3)
+print(countries)</code></pre>
+        <p>The output:</p>
+<pre><code class="language-python">['Belgium', 'Indonesia', 'Turkey', 'Japan']</code></pre>
+        <p>The <code>pop()</code> method removes the specified index. If the index is not specified, it removes the last item.</p><br>
+
+        <p>Using <code>del</code> keyword removes the specified index:</p>
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
+del countries[1]
+print(countries)</code></pre>
+        <p>The output:</p>
+<pre><code class="language-python">['Belgium', 'Turkey', 'Netherland', 'Japan']</code></pre><br>
+
+        <p>Using <code>clear()</code> keyword removes all the elements from a list:</p>
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
+countries.clear()
+print(countries)</code></pre>
+        <p>The output:</p>
+<pre><code class="language-python">[]</code></pre><br>
+
+
         <h3>Change item value</h3>
-        <p>As we mentioned that list is mutable or changeable. It means that you can change items in the list using the assignment operator (=), as an example below:</p>
+        <p>As we mentioned that list is mutable or changeable. It means that you can change items in the list using the assignment operator (=), as examples below:</p>
         <p>Change the 2nd item:</p>
 <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
 countries[1] = 'France'
@@ -128,51 +183,7 @@ I have been to Turkey
 I have been to Netherland
 I have been to Japan</code></pre><br>
 
-        <h3>Remove item(s) from list</h3>
-        <p>There are some methods to remove item(s) from a list, such as these examples below:</p><br>
-        <p>Using <code>remove()</code> method:</p>
-<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
-countries.remove("Japan")
-    print(countries)</code></pre>
-        <p>The output:</p>
-<pre><code class="language-python">['Belgium', 'Indonesia', 'Turkey', 'Netherland']</code></pre><br>
-        <p>Using <code>pop()</code> method:</p>
-<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
-countries.pop(3)
-    print(countries)</code></pre>
-        <p>The output:</p>
-<pre><code class="language-python">['Belgium', 'Indonesia', 'Turkey', 'Netherland']</code></pre>
-        <p>The <code>pop()</code> method removes the specified index. If the index is not specified, it removes the last item.</p><br>
-
-        <p>Using <code>del</code> keyword removes the specified index:</p>
-<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
-del countries[1]
-    print(countries)</code></pre>
-        <p>The output:</p>
-<pre><code class="language-python">['Belgium', 'Indonesia', 'Turkey', 'Japan']</code></pre><br>
-
-        <p>Using <code>clear()</code> keyword removes all the elements from a list:</p>
-<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
-countries.clear()
-print(countries)</code></pre>
-        <p>The output:</p>
-<pre><code class="language-python">[]</code></pre><br>
-
-        <p>Using the <code>insert()</code> method to add an item at the specified index:</p>
-<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
-countries.insert(2,'Spain')
-print(countries)</code></pre>
-        <p>The output:</p>
-<pre><code class="language-python">['Belgium', 'Indonesia', 'Spain', 'Turkey', 'Netherland', 'Japan']</code></pre><br>
-
-        <p>Using the <code>extend()</code> method to add all elements of a list to another list:</p>
-<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
-countries1= ['Singapore','Australia']
-countries.extend(countries1)
-print(countries)</code></pre>
-        <p>The output:</p>
-<pre><code class="language-python">['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan', 'Singapore', 'Australia']</code></pre><br>
-
+        <h3>Sort item in a list</h3>
         <p>Using the <code>sort()</code> method to sort the list ascending by default:</p>
 <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
 countries.sort()
@@ -180,13 +191,7 @@ print(countries)</code></pre>
         <p>The output:</p>
 <pre><code class="language-python">['Belgium', 'Indonesia', 'Japan', 'Netherland', 'Turkey']</code></pre><br>
 
-        <p>Using <code>append()</code> method to append an element to the end of the list:</p>
-<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan']
-continents= ['Asia','Africa, Europe']
-countries.append(continents)
-print(countries)</code></pre>
-        <p>The output:</p>
-<pre><code class="language-python">['Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan', ['Asia', 'Africa, Europe']]</code></pre>       
+       
     </div>
 </body>
 </html>
