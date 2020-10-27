@@ -13,4 +13,5 @@
   
   - ### Data-Structures
     - [lists](./BOP/data-structures/lists_arrays.html)
+    - [tuples](./BOP/data-structures/tuples.html)
 
