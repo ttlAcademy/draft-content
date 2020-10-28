@@ -13,193 +13,188 @@
 <body>
 
     <h2>Tuples</h2>
-    <p>A tuple is very similar to a lis it allows us to store some data and repetition of items are also possible.
-    </p>
-
-    <p>Only one main difference is a tuple is immutable. What does it mean? You can not add an item to a tuple or
-        you can not update one of the items after you create it. Consider using tuples if you have different types of
-        data in your collection or if your collection needs to be write protected on the other hand consider using lists
-        if you have same types of data in your collection. This is not must have but general best practices.</p>
-
-    <p>The basic syntax of a Tuple:</p>
-    <pre class="line-number"
-        style="margin-bottom: 30px"><code class="language-python">my_tuple = (value1, value2, value3, ..., valueN)</code></pre>
-    <p>To help you understand better, let’s have a look at the following examples:</p>
-
-    <h3>Empty Tuple</h3>
-    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">empty_tuple = ()
-</code></pre>
-
-    <h3>A Tuple of strings</h3>
-    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ('Belgium', 'Germany', 'France', 'Netherland', 'Poland')
-print(countries)</code></pre>
-    <p>The output:</p>
-    <pre><code class="language-python">('Belgium', 'Germany', 'France', 'Netherland', 'Poland')</code></pre><br>
-
-    <h3>A Tuple of integers</h3>
-    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">birthyears= (1985,1986,1988,1989,1999)
-print(birthyears)</code></pre>
-    <p>The output:</p>
-    <pre><code class="language-python">(1985, 1986, 1988, 1989, 1999)</code></pre><br>
-
-    <h3>A Tuple of mixed datatypes</h3>
-    <p>We can have different types of data inside tuples. Look at example below each item is different type of data
-    </p>
-    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">that_man = (42, 'smart', 1.70, True, ['tennis', 'walking', 'ski'])
-print(that_man)</code></pre>
-    <p>The output:</p>
-    <pre><code class="language-python">(42, 'smart', 1.70, True, ['tennis', 'walking', 'ski'])</code></pre>
-    <p>There are four data types and one data structure in the mixed tuple above which are integer (42), string
-        (smart), float (1.70), Boolean (True) and one list ['tennis', 'walking', 'ski']</p>
-
-    <h3>Accessing items in the Tuple by index</h3>
-    <p>You can access each item in a tuple by referring to the index number in the square brackets. Each item in a
-        tuple has an assigned index value. When you start from left to right (LTR), the first item of a tuple is
-        always at index zero as we learned during topic lists.</p>
-
-    <p>To be more clear, here is an example:</p>
-    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ('Belgium', 'Poland', 'France', 'Netherland', 'Germany')
-print('I am from', countries[1], 'and I live in', countries[0])</code></pre>
-    <p>When you run the given code above, the output will be:</p>
-    <pre><code class="language-python">I am from Poland and I live in Belgium</code></pre>
-
-    <h3>Negative indexing</h3>
-    <p>You can also access each item in a tuple with negative indexing which the index of -1 refers to the last item
-        , -2 to the second last item and so on. In this case you are starting to count from right to left (RTL). Again
-        Indexing logic is the same as in the lists.</p>
-    <img src="https://user-images.githubusercontent.com/46647106/96244822-e079d280-0fa6-11eb-8102-d32d959c36b2.png"
-        alt="negative-index.png">
-    <p>Example:</p>
-    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries = ('Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan')
-print('I am from', countries[-3], 'and I live in', countries[-5])</code></pre>
-    <p>The output:</p>
-    <pre><code class="language-python">I am from Turkey and I live in Belgium</code></pre><br>
-
-    <h3>Slice Tuples</h3>
-    <p>In python, you can access a range of items in a tuple by using the slicing operator.</p>
-    <img src="https://user-images.githubusercontent.com/46647106/96427185-86734a00-11fe-11eb-8dd5-c7718adb6602.png"
-        alt="slicing-index.png">
-    <p>Example:</p>
-    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ('Belgium', 'Germany', 'Poland', 'Netherland', 'Japan')
-print(countries[1:3])</code></pre>
-    <p>Here is the output:</p>
-    <pre><code class="language-python">('Germany', 'Poland')</code></pre><br>
-
-    <p>An example of slicing items from a particular point to end:</p>
-    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ('Belgium', 'Germany', 'Poland', 'Netherland', 'Japan')
-print(countries[3:])</code></pre>
-    <p>The output:</p>
-    <pre><code class="language-python">('Netherland', 'Japan')</code></pre><br>
-
-    <p>An example of slicing items from beginning to a particular point:</p>
-    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ('Belgium', 'Germany', 'Poland', 'Netherland', 'Japan')
-print(countries[:3])</code></pre>
-    <p>The output:</p>
-    <pre><code class="language-python">('Belgium', 'Germany', 'Poland')</code></pre><br>
-
-    <p>If you want to start the search from the end of the tuple, then you can use negative indexes.</p>
-    <img src="https://user-images.githubusercontent.com/46647106/96433735-8f1b4e80-1205-11eb-89b5-c7e30933104a.png"
-        alt="slicing-neg-index.png">
-    <p>You can have a look at the following example:</p>
-    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ('Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan')
-print(countries[-4:-1])</code></pre>
-    <p>The output:</p>
-    <pre><code class="language-python">('Indonesia', 'Turkey', 'Netherland')</code></pre>
-    <p>The example above returns the items from index -4 (included) to index -1 (excluded).</p><br>
-
-    <p>If you want to reverse the items in the tuple, see the example below:</p>
-    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ('Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan')
-print(countries[::-1])</code></pre>
-    <p>The output:</p>
-    <pre><code class="language-python">('Japan', 'Netherland', 'Turkey', 'Indonesia', 'Belgium')</code></pre>
-    <p>The slice statement [::-1] means start at the end of the string and end at position 0, move with the step -1, the
-        negative one, which means one step backwards.</p>
-
-
-    <h3>Is it possible to change a Tuple?</h3>
-
-    <p>As we mentioned earlier tuples are immutable. An item of a tuple ca not be changed once it is assigned. If you
-        try to change an item of a tuple;</p>
-    <pre><code class="line-numbers language-python">countries[2] = 'Germany'</code></pre>
-    <p>you will get type error.</p>
-
-    <pre><code class="language-pyt">Traceback (most recent call last):
-    File "&lt;pyshell#23&gt;", line 1, in &lt;module&gt;
-        countries[2] = 'Germany'
-TypeError: 'tuple' object does not support item assignment
-</code></pre>
-
-    <p>But there are some tricks and details need to be mentioned.</p>
-    <ul>
-        <li>
-            <p>You can reassign tuple, in this case you can change as a whole object.</p>
-            <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ('Spain', 'Sweden', 'Italy', 'Denmark', 'Norway')
-</code></pre>
-        </li>
-        <li>
-            <p>If item inside a tuple is mutable, this item can be changed.</p>
-            <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">that_man = (42, 'smart', 1.70, True, ['tennis', 'walking', 'ski'])
-that_man[4][0] = 'football'
-print(that_man)
-</code></pre>
-            <p>The output:</p>
-            <pre><code class="language-python">(42, 'smart', 1.70, True, ['football', 'walking', 'ski'])</code></pre>
-            <p>Since the last item is type of list, python accepts this changes. Because we are changing an item of the
-                list.</p>
-        </li>
-
-        <li>
-            <p>You can convert a tuple into a list, change the item whatever you want and then you can convert it back
-                to tuple.</p>
-            <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">that_man = (42, 'smart', 1.70, True, ['tennis', 'walking', 'ski'])
-that_man_list = list(that_man)
-that_man_list[1] = 'dummy'
-that_man = tuple(that_man_list)
-print(that_man)
-</code></pre>
-            <p>The output:</p>
-            <pre><code class="language-python">(42, 'dummy', 1.70, True, ['tennis', 'walking', 'ski'])</code></pre>
-            <p>We have used <code>list()</code> and <code>tuple()</code> functions for conversion between two types.</p>
-        </li>
-
-    </ul>
-
-    <h3>Using Boolean Logic in a Tuple</h3>
-
-    <p>We can check any item if it exist in a tuple or not. This boolean operation return True or False according to
-        operation result. To achieve this we use <code>in</code> keyword.</p>
-
-    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ('Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan')
-check_result = 'Belgium' in countries
-print(check_result)
-check_result = 'Spain' in countries
-print(check_result)
-</code></pre>
-
-    <p>The output:</p>
-    <pre style="margin-bottom: 30px"><code class="language-python">True
-False</code></pre>
-
-
-    <h3>Loop through a Tuple</h3>
-    <p>You can iterate through each item in a Tuple using for loop.</p>
-    <p>Example:</p>
-    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ('Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan')
-for i in countries:
-    print('I have been to', i)</code></pre>
-    <p>The output:</p>
-    <pre><code class="language-python">I have been to Belgium
-I have been to Indonesia
-I have been to Turkey
-I have been to Netherland
-I have been to Japan</code></pre>
-
-    <h3>Delete a Tuple</h3>
-    You may want to delete your tuple. In this case you can use <code>del</code> command. You need to be sure when you
-    use this command. It deletes entire tuple.
-
-    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">del countries
-</code></pre>
+        <p>A tuple is very similar to a lis it allows us to store some data and repetition of items are also possible.
+        </p>
+    
+        <p>Only one main difference is a tuple is immutable. What does it mean? You can not add an item to a tuple or you can not update one of the items after you create it. Consider using tuples if you have different types of data in your collection or if your collection needs to be write-protected on the other hand consider using lists if you have the same types of data in your collection. This is not must have but general best practices.</p>
+    
+        <p>The basic syntax of a Tuple:</p>
+        <pre class="line-number"
+            style="margin-bottom: 30px"><code class="language-python">my_tuple = (value1, value2, value3, ..., valueN)</code></pre>
+        <p>To help you understand better, let’s have a look at the following examples:</p>
+    
+        <h3>Empty Tuple</h3>
+        <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">empty_tuple = ()
+    </code></pre>
+    
+        <h3>A Tuple of strings</h3>
+        <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ('Belgium', 'Germany', 'France', 'Netherland', 'Poland')
+    print(countries)</code></pre>
+        <p>The output:</p>
+        <pre><code class="language-python">('Belgium', 'Germany', 'France', 'Netherland', 'Poland')</code></pre><br>
+    
+        <h3>A Tuple of integers</h3>
+        <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">birthyears= (1985,1986,1988,1989,1999)
+    print(birthyears)</code></pre>
+        <p>The output:</p>
+        <pre><code class="language-python">(1985, 1986, 1988, 1989, 1999)</code></pre><br>
+    
+        <h3>A Tuple of mixed datatypes</h3>
+        <p>We can have different types of data inside tuples. Look at example below each item is different type of data
+        </p>
+        <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">that_man = (42, 'smart', 1.70, True, ['tennis', 'walking', 'ski'])
+    print(that_man)</code></pre>
+        <p>The output:</p>
+        <pre><code class="language-python">(42, 'smart', 1.70, True, ['tennis', 'walking', 'ski'])</code></pre>
+        <p>There are four data types and one data structure in the mixed tuple above which are integer (42), string
+            (smart), float (1.70), Boolean (True) and one list ['tennis', 'walking', 'ski']</p>
+    
+        <h3>Accessing items in the Tuple by index</h3>
+        <p>You can access each item in a tuple by referring to the index number in the square brackets. Each item in a
+            tuple has an assigned index value. When you start from left to right (LTR), the first item of a tuple is always at index zero as we learned during topic lists.</p>
+    
+        <p>To be more clear, here is an example:</p>
+        <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ('Belgium', 'Poland', 'France', 'Netherland', 'Germany')
+    print('I am from', countries[1], 'and I live in', countries[0])</code></pre>
+        <p>When you run the given code above, the output will be:</p>
+        <pre><code class="language-python">I am from Poland and I live in Belgium</code></pre>
+    
+        <h3>Negative indexing</h3>
+        <p>You can also access each item in a tuple with negative indexing which the index of -1 refers to the last item
+            , -2 to the second last item and so on. In this case you are starting to count from right to left (RTL). Again
+            Indexing logic is the same as in the lists.</p>
+        <img src="https://user-images.githubusercontent.com/46647106/96244822-e079d280-0fa6-11eb-8102-d32d959c36b2.png"
+            alt="negative-index.png">
+        <p>Example:</p>
+        <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries = ('Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan')
+    print('I am from', countries[-3], 'and I live in', countries[-5])</code></pre>
+        <p>The output:</p>
+        <pre><code class="language-python">I am from Turkey and I live in Belgium</code></pre><br>
+    
+        <h3>Slice Tuples</h3>
+        <p>In python, you can access a range of items in a tuple by using the slicing operator.</p>
+        <img src="https://user-images.githubusercontent.com/46647106/96427185-86734a00-11fe-11eb-8dd5-c7718adb6602.png"
+            alt="slicing-index.png">
+        <p>Example:</p>
+        <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ('Belgium', 'Germany', 'Poland', 'Netherland', 'Japan')
+    print(countries[1:3])</code></pre>
+        <p>Here is the output:</p>
+        <pre><code class="language-python">('Germany', 'Poland')</code></pre><br>
+    
+        <p>An example of slicing items from a particular point to end:</p>
+        <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ('Belgium', 'Germany', 'Poland', 'Netherland', 'Japan')
+    print(countries[3:])</code></pre>
+        <p>The output:</p>
+        <pre><code class="language-python">('Netherland', 'Japan')</code></pre><br>
+    
+        <p>An example of slicing items from beginning to a particular point:</p>
+        <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ('Belgium', 'Germany', 'Poland', 'Netherland', 'Japan')
+    print(countries[:3])</code></pre>
+        <p>The output:</p>
+        <pre><code class="language-python">('Belgium', 'Germany', 'Poland')</code></pre><br>
+    
+        <p>If you want to start the search from the end of the tuple, then you can use negative indexes.</p>
+        <img src="https://user-images.githubusercontent.com/46647106/96433735-8f1b4e80-1205-11eb-89b5-c7e30933104a.png"
+            alt="slicing-neg-index.png">
+        <p>You can have a look at the following example:</p>
+        <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ('Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan')
+    print(countries[-4:-1])</code></pre>
+        <p>The output:</p>
+        <pre><code class="language-python">('Indonesia', 'Turkey', 'Netherland')</code></pre>
+        <p>The example above returns the items from index -4 (included) to index -1 (excluded).</p><br>
+    
+        <p>If you want to reverse the items in the tuple, see the example below:</p>
+        <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ('Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan')
+    print(countries[::-1])</code></pre>
+        <p>The output:</p>
+        <pre><code class="language-python">('Japan', 'Netherland', 'Turkey', 'Indonesia', 'Belgium')</code></pre>
+        <p>The slice statement [::-1] means start at the end of the string and end at position 0, move with the step -1, the
+            negative one, which means one step backwards.</p>
+    
+    
+        <h3>Is it possible to change a Tuple?</h3>
+    
+        <p>As we mentioned earlier tuples are immutable. An item of a tuple ca not be changed once it is assigned. If you
+            try to change an item of a tuple;</p>
+        <pre><code class="line-numbers language-python">countries[2] = 'Germany'</code></pre>
+        <p>you will get type error.</p>
+    
+        <pre><code class="language-pyt">Traceback (most recent call last):
+        File "&lt;pyshell#23&gt;", line 1, in &lt;module&gt;
+            countries[2] = 'Germany'
+    TypeError: 'tuple' object does not support item assignment
+    </code></pre>
+    
+        <p>But there are some tricks and details need to be mentioned.</p>
+        <ul>
+            <li>
+                <p>You can reassign tuple, in this case you can change as a whole object.</p>
+                <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ('Spain', 'Sweden', 'Italy', 'Denmark', 'Norway')
+    </code></pre>
+            </li>
+            <li>
+                <p>If item inside a tuple is mutable, this item can be changed.</p>
+                <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">that_man = (42, 'smart', 1.70, True, ['tennis', 'walking', 'ski'])
+    that_man[4][0] = 'football'
+    print(that_man)
+    </code></pre>
+                <p>The output:</p>
+                <pre><code class="language-python">(42, 'smart', 1.70, True, ['football', 'walking', 'ski'])</code></pre>
+                <p>Since the last item is type of list, python accepts this changes. Because we are changing an item of the
+                    list.</p>
+            </li>
+    
+            <li>
+                <p>You can convert a tuple into a list, change the item whatever you want and then you can convert it back
+                    to tuple.</p>
+                <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">that_man = (42, 'smart', 1.70, True, ['tennis', 'walking', 'ski'])
+    that_man_list = list(that_man)
+    that_man_list[1] = 'dummy'
+    that_man = tuple(that_man_list)
+    print(that_man)
+    </code></pre>
+                <p>The output:</p>
+                <pre><code class="language-python">(42, 'dummy', 1.70, True, ['tennis', 'walking', 'ski'])</code></pre>
+                <p>We have used <code>list()</code> and <code>tuple()</code> functions for conversion between two types.</p>
+            </li>
+    
+        </ul>
+    
+        <h3>Using Boolean Logic in a Tuple</h3>
+    
+        <p>We can check any item if it exists in a tuple or not. This boolean operation returns True or False according to operation result. To achieve this we use <code>in</code> keyword.</p>
+    
+        <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ('Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan')
+    check_result = 'Belgium' in countries
+    print(check_result)
+    check_result = 'Spain' in countries
+    print(check_result)
+    </code></pre>
+    
+        <p>The output:</p>
+        <pre style="margin-bottom: 30px"><code class="language-python">True
+    False</code></pre>
+    
+    
+        <h3>Loop through a Tuple</h3>
+        <p>You can iterate through each item in a Tuple using for loop.</p>
+        <p>Example:</p>
+        <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= ('Belgium', 'Indonesia', 'Turkey', 'Netherland', 'Japan')
+    for i in countries:
+        print('I have been to', i)</code></pre>
+        <p>The output:</p>
+        <pre><code class="language-python">I have been to Belgium
+    I have been to Indonesia
+    I have been to Turkey
+    I have been to Netherland
+    I have been to Japan</code></pre>
+    
+        <h3>Delete a Tuple</h3>
+        You may want to delete your tuple. In this case you can use <code>del</code> command. You need to be sure when you use this command. It deletes the entire tuple.
+    
+        <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">del countries
+    </code></pre>
+    
 
 
 </body>
