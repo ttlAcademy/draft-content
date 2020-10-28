@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=P, initial-scale=1.0">
+    <title>Python Sets</title>
+
+    <script src="https://ttlacademy.github.io/assets/prism2.js"></script>
+    <link href="https://ttlacademy.github.io/assets/prism2.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2>Sets</h2>
+    <p>Set is another data structure in Python. It does not allow us to enter same value as an item. So no repetition.
+        The another key point is Sets never guarantee the order of its items, so it is unordered.</p>
+
+    <p>The basic syntax of a Set:</p>
+
+    <pre class="line-number"
+        style="margin-bottom: 30px"><code class="language-python">my_set = {value1, value2, value3, ..., valueN}</code></pre>
+    <p>To help you understand better, let’s have a look at the following examples:</p>
+
+    <h3>Empty Set</h3>
+    <p>As you se we are using curly braces <code>{}</code> for set. But another structure, dictionaries which we learn
+        on the next lesson also use curly braces. To create empty set we should use <code>set()</code> function.
+        Otherwise <code>my_collection = {}</code> will create empty dictionary for us.</p>
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">empty_set = set()
+</code></pre>
+
+    <h3>A Set of strings</h3>
+    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries= {'Belgium', 'Germany', 'France', 'Netherland', 'Poland'}
+print(countries)</code></pre>
+    <p>The output:</p>
+    <pre><code class="language-python">{'Belgium', 'Germany', 'France', 'Netherland', 'Poland'}</code></pre><br>
+
+    <h3>A Set of integers</h3>
+    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">birthyears= {1985,1986,1988,1989,1999}
+print(birthyears)</code></pre>
+    <p>The output:</p>
+    <pre><code class="language-python">{1985, 1986, 1988, 1989, 1999}</code></pre><br>
+
+    <h3>A Set of mixed datatypes</h3>
+    <p>We can have different types of data inside Sets. Look at example below each item is different type of data. Only
+        primitive types and immutable types are allowed. You cannot put a list inside a set. We will cover immutability
+        on the following lines.
+    </p>
+    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">that_man = {42, 'smart', 1.70, True, ('tennis', 'walking')}
+print(that_man)</code></pre>
+    <p>The output:</p>
+    <pre><code class="language-python">{42, 'smart', 1.70, True, ('tennis', 'walking'))</code></pre>
+    <p>There are four data types and one data structure in the mixed set above which are integer (42), string
+        (smart), float (1.70), Boolean (True) and tuple ('tennis', 'walking')</p>
+
+    <h3>Set is Semi-mutable</h3>
+
+    <p>Unlike tuple we can add and remove an item to/from a Set. But we can not change item itself. So items are
+        immutable
+        inside Set whereas Set is mutable. Let's have below example.</p>
+
+    <h4>Add item to a Set</h4>
+
+    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">birthyears= {1985,1986,1988,1989,1999}
+birthyears.add(2000)
+print(birthyears)
+</code></pre>
+
+    <p>The output:</p>
+    <pre><code class="language-python">{1985,1986,1988,1989,1999,2000}</code></pre>
+
+    <p>when you try to add an item already inside the Set you will not get an error, but adding same item will not
+        responded and Set will not change</p>
+    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">birthyears.add(2000)
+print(birthyears)
+</code></pre>
+
+    <p>The output will be the same as it is:</p>
+    <pre><code class="language-python">{1985,1986,1988,1989,1999,2000}</code></pre>
+
+    <h4>Remove item from a Set</h4>
+
+    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">birthyears= {1985,1986,1988,1989,1999}
+birthyears.remove(1986)
+print(birthyears)
+</code></pre>
+
+    <p>The output:</p>
+    <pre><code class="language-python">{1985,1988,1989,1999,2000}</code></pre>
+
+
+    <h4>Updating a Set</h4>
+    <p><code>update()</code> method can be used to add multiple items at once. In this case pass the multiple items
+        inside a list.</p>
+    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">birthyears= {1985,1986,1988,1989,1999}
+birthyears.update([2001,2002,2003,2004])
+print(birthyears)
+</code></pre>
+
+    <p>The output:</p>
+    <pre><code class="language-python">{1985,1988,1989,1999,2000,2001,2002,2003,2004}</code></pre>
+
+    <h4>Mutable items are not allowed</h4>
+    <p>We cannot pass mutable item into a Set. Below here [2005, 2006] is a list which is mutable as we have learned.
+    If you try this you will get an error.</p>
+
+    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">birthyears= {2001,2002,2003,[2005,2006]}
+</code></pre>
+
+    <p>The output:</p>
+<pre><code class="language-pyt">Traceback (most recent call last):
+    File "&lt;pyshell#90&gt;", line 1, in &lt;module&gt;
+        birthyears= {2001,2002,2003,[2005,2006]}
+TypeError: unhashable type: 'list'
+</code></pre>
+
+<h3>Accessing an item by index is not possbile</h3>
+    <p>If you ever try to access any item by index you will get an error.</p>
+    <pre><code class="language-python">print(birthyears[1])
+</code></pre>
+
+<p>The output:</p>
+<pre><code class="language-pyt">Traceback (most recent call last):
+    File "&lt;pyshell#90&gt;", line 1, in &lt;module&gt;
+        print(birthyears[1])
+TypeError: 'set' object is not subscriptable
+</code></pre>
+
+<h3>Loop through a Set</h3>
+<p>You can iterate through each item in a Set using for loop.</p>
+<p>Example:</p>
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">for i in birthyears:
+    print(i)</code></pre>
+<p>The output:</p>
+<pre><code class="language-python">1985
+1988
+1989
+1999
+2000
+2001
+2002
+2003
+2004
+</code></pre>
+
+
+<h3>Clearing a Set</h3>
+    <p><code>clear()</ccode> method makes empty set.</p>
+    <pre><code class="language-python">birthyears.clear()
+print(birthyears)</code></pre>
+
+<p>The output:</p>
+    <pre><code class="language-python">set()</code></pre>
+
+</body>
+
+</html>
