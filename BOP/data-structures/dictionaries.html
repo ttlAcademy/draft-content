@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionaries</title>
+    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+    <script src="https://ttlacademy.github.io/assets/prism2.js"></script>
+    <link href="https://ttlacademy.github.io/assets/prism2.css" rel="stylesheet">
+
+    <style>
+        code{
+            background: #000;
+            color: #fff;
+            padding: 1px 4px 1px 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Dictionaries</h2>
+    <p>A Dictionary is another data structure in python and it is a key/value pairs collection. The order can't be
+        guaranteed in dictionary and it is mutable.The curly braces <code>{}</code> is used to create a dictionary.</p>
+
+    <p>The basic syntax of a Dictionary:</p>
+    <pre class="line-number"
+        style="margin-bottom: 30px"><code class="language-python">my_dictionary = {key1: 'value1', key2: 'value2', ..., keyN:'valueN'}</code></pre>
+    <p>To help you understand better, let’s have a look at the following examples:</p>
+
+    <h3>Empty Dictionary</h3>
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">empty_dic = {}
+</code></pre>
+
+    <h3>Integer key set</h3>
+    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">countries = {1: 'Belgium', 2: 'Germany', 3:'Netherland', 4:'France'}
+print(countries)</code></pre>
+    <p>The output:</p>
+    <pre><code class="language-python">{1: 'Belgium', 2: 'Germany', 3: 'Netherland', 4: 'France'}</code></pre>
+
+    <h3>Mixed key set</h3>
+    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">mixed_dic = {1: 'Automation', 'program': 'Python', 'numbers':[1,2,3]}
+</code></pre>
+
+    <h3>Accessing elements</h3>
+    <p>Instead of index, dictionaries use keys to access values. We can use keys inside square brackets <code>[]</code>
+        or <code>get()</code> method.</p>
+
+    <p>Here are some examples:</p>
+    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">that_man = {'name': 'KodMan', 'birth': 1978, 'hobbies': ['tennis', 'ski']}
+print(that_man['name'])
+print(that_man['hobbies'])
+print(that_man['hobbies'][0])</code></pre>
+
+    <p>When you run the given code above, the output will be:</p>
+    <pre><code class="language-python">KodMan
+['tennis', 'ski']
+tennis</code></pre>
+
+    <h3>Adding in and updating a Dictionary</h3>
+
+    <p>Adding or updating we are using assignment operator <code>'='</code>. If the key already exists, this operation
+        updates the value, in case the key does not exist it will create key/value pairs</p>
+    <pre><code class="line-numbers language-python"># update that_man name
+that_man['name'] = 'CodeMan'
+print(that_man)</code></pre>
+
+    <p>The output:</p>
+    <pre><code class="language-python">{'name': 'CodeMan', 'birth': 1978, 'hobbies': ['tennis', 'ski']}
+</code></pre>
+
+    <p>When we add the new key:</p>
+    <pre><code class="line-numbers language-python"># adding 'lastname' into that_man
+that_man['lastname'] = 'Byte'
+print(that_man)</code></pre>
+
+    <p>The output:</p>
+    <pre><code class="language-python">{'name': 'CodeMan', 'birth': 1978, 'hobbies': ['tennis', 'ski'], 'lastname': 'Byte'}
+</code></pre>
+
+    <h3>Deleting Element in a Dictionary</h3>
+    <p>We are using <code>pop()</code> method to remove an item from a Dictionary.</p>
+    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">that_man.pop('lastname')
+print(that_man)</code></pre>
+
+<p>The output:</p>
+<pre><code class="language-python">{'name': 'CodeMan', 'birth': 1978, 'hobbies': ['tennis', 'ski']}
+</code></pre>
+
+    <h3>Loop through a Dictionary</h3>
+    <p>You can iterate through each item in a Dictionary using for loop. If you use directly item, you get keys. If you
+        use items in the square bracket you get values.</p>
+    <p>Example:</p>
+    <pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">for i in that_man:
+    print('that man:', i)</code></pre>
+    <p>The output will be all keys:</p>
+    <pre><code class="language-python">that man: name
+that man: birth
+that man: hobbies
+</code></pre>
+
+<p>If you use iterated keys inside square brackets:</p>
+<pre class="line-numbers copytoclipboard" style="margin-bottom: 30px"><code class="language-python">for i in that_man:
+    print('that man:', that_man[i])</code></pre>
+<p>The output will be all values:</p>
+<pre><code class="language-python">that man: CodeMan
+that man: 1978
+that man: ['tennis', 'ski']
+</code></pre>
+
+
+    <h3>Delete a Dictionary</h3>
+    <p>You may want to delete your all key/value pairs in the dictionary. In this case you can use
+        <code>clear()</code> method.</p>
+
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">that_man.clear()</code></pre>
+
+    <p>This method will not delete a dictionary but makes it empty. To delete entire object use <code>del</code> command.</p>
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">del that_man</code></pre>
+
+</body>
+
+</html>

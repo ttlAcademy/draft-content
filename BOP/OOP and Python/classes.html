@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=P, initial-scale=1.0">
+    <title>Python Classes</title>
+
+    <script src="https://ttlacademy.github.io/assets/prism2.js"></script>
+    <link href="https://ttlacademy.github.io/assets/prism2.css" rel="stylesheet">
+
+    <style>
+        code {
+            background: #000;
+            color: #fff;
+            padding: 1px 4px 1px 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Defining Classes and Instances in Python</h2>
+    <p>In this lesson we continue our OOP journey and learn how we can do it with Python. Below we are creating our very
+        first class assuming we are creating a car class.</p>
+
+    <h3>The basic syntax of a Class and Constructor:</h3>
+
+    <p>Python class starts with <code>class</code> keyword. Below the first function begins with double underscore
+        is <code>__init__</code>. One of the special functions in Python. It always gets called whenever a new object
+        initiated from this class. This type of function is also called constructors in Object Oriented Programming
+        (OOP). They are used to initialize the variables inside classes.
+    </p>
+
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">class Car:
+    # global attributes (it is valid for all object created from this class)
+    type = "transportation"
+    
+    # attributes
+    def __init__(self, make, color):
+        self.make = make
+        self.color = color</code></pre>
+
+    <p>We can initiate our objects from the Car class.</p>
+
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">first_car = Car("Mercedes","Black")
+second_car = Car("BMW", "White")</code></pre>
+
+    <p>Now it is possible to access both the class attributes (global attributes) and the instance attributes.</p>
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python"># class attributes
+print(f"the first car is the means of {first_car.__class__.type}")
+print(f"the second car is the means of {second_car.__class__.type}")</code></pre>
+
+    <p>We are using format string in the above statement. it starts with lower <code>f</code>. Inside string between
+        curly brackets <code>{}</code>we can use variables.</p>
+
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python"># instance attributes
+print(f"{first_car.make} is a good car. I like {first_car.color} color.")
+print(f"{second_car.make} is also a good car. I like {second_car.color} color.")</code></pre>
+
+    <p>The output:</p>
+
+    <pre style="margin-bottom: 30px"><code class="language-python">the first car is the means of transportation
+the second car is the means of transportation
+Mercedes is a good car. I like Black color.
+BMW is also a good car. I like White color.</code></pre>
+
+    <h3>Class Methods</h3>
+    <p>As we mentioned on the previous lesson, methods are functions created inside class. They are actions for
+        instances. Objects acts according the methods.</p>
+
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">class Car:
+    # global attributes (it is valid for all object created from this class)
+    type = "transportation"
+    
+    # attributes
+    def __init__(self, make, color):
+        self.make = make
+        self.color = color
+    
+    # methods
+    def move_forward(self, unit):
+        return f"{self.make} has moved {unit} unit."</code></pre>
+
+    <p>Now we can initiate the object and call the new method.</p>
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">third_car = Car("Volvo", "Gray")
+
+# call object the method
+print(third_car.move_forward(5))</code></pre>
+
+    <p>The output:</p>
+
+    <pre style="margin-bottom: 30px"><code class="language-python">Volvo has moved 5 unit.</code></pre>
+</body>
+
+</html>

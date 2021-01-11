@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.1 solution</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="mx-10 my-10 text-lg">
+
+    <table style="width:100%; border: 1px solid #000;">
+        <h2>Sample Solution</h2>
+        <tbody>
+            <tr style="border: 1px solid #000;">
+                <td style="background: teal; color:#fff; padding:5px; border: 1px solid #000;">Learning Objective</td>
+                <td style="padding:5px; border: 1px solid #000;">ALTA-E-2.1.1 (K4) Analyze a system under test to
+                    determine the appropriate automation solution.</td>
+            </tr>
+            <tr style="border: 1px solid #000;">
+                <td style="background: teal; color:#fff; padding:5px;border: 1px solid #000;">Time</td>
+                <td style="padding:5px;border: 1px solid #000;">60 Minutes</td>
+            </tr>
+            <tr style="border: 1px solid #000;">
+                <td style="background: teal; color:#fff; padding:5px;border: 1px solid #000;">Version</td>
+                <td style="padding:5px;border: 1px solid #000;">1.1</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table style="width:100%; border: 1px solid #000;" class = "mt-10">
+        
+        <tbody>
+            <tr style="border: 1px solid #000;">
+                <th style="background: rgb(13, 101, 160); color:#fff; padding:5px; border: 1px solid #000;">Test Tool Requirements</td>
+                <th style="background: rgb(13, 101, 160); color:#fff; padding:5px; border: 1px solid #000;">Weight</td>
+                <th style="background: rgb(13, 101, 160); color:#fff; padding:5px; border: 1px solid #000;">Explanation</td>
+            </tr>
+            <tr style="border: 1px solid #000;">
+                <td style="padding:5px;border: 1px solid #000;">SUT interface: Browser Testing</td>
+                <td style="padding:5px;border: 1px solid #000;">Must</td>
+                <td style="padding:5px;border: 1px solid #000;">Core application is SPA and even on mobile devices web technologies (Ionic Framework) will run for the sake of HTML support for media and cross-platform support with optimal performance. So browser testing has to be in the main effort.</td>
+            </tr>
+            <tr style="border: 1px solid #000;">
+                <td style="padding:5px;border: 1px solid #000;">SUT Interface: Mobile Devices</td>
+                <td style="padding:5px;border: 1px solid #000;">Must</td>
+                <td style="padding:5px;border: 1px solid #000;">New application easily can feed mobile devices through API. Since many people are using mobile devices more than PC for their daily life, mobile application test should be in place.</td>
+            </tr>
+            <tr style="border: 1px solid #000;">
+                <td style="padding:5px;border: 1px solid #000;">SUT interface: API Testing</td>
+                <td style="padding:5px;border: 1px solid #000;">Must</td>
+                <td style="padding:5px;border: 1px solid #000;">API will be ain action both internal and external services including third party email services. So this is definitely one of the most important part of the new application.</td>
+            </tr>
+            <tr style="border: 1px solid #000;">
+                <td style="padding:5px;border: 1px solid #000;">SUT Database access</td>
+                <td style="padding:5px;border: 1px solid #000;">Should</td>
+                <td style="padding:5px;border: 1px solid #000;">All information will be stored in MySQL database. Test team deal with data through interfaces and mainly data test will be black box test. But to make sure data is consist across the critical components such as stock control, orders, refund etc. test team needs to compare raw data and should able to query to the served data by application. Without compromising access rights policy, proper data access should be in place for testing. For example access to mock snapshot.</td>
+            </tr>
+            <tr style="border: 1px solid #000;">
+                <td style="padding:5px;border: 1px solid #000;">Third Party: Integration with Jira</td>
+                <td style="padding:5px;border: 1px solid #000;">Should</td>
+                <td style="padding:5px;border: 1px solid #000;">Defect tracking and reporting are run by Jira. Test roadmap aligned with development roadmap should be integrated into Jira. So possible tools are required to have features for this integration.</td>
+            </tr>
+            <tr style="border: 1px solid #000;">
+                <td style="padding:5px;border: 1px solid #000;">SUT Architecture: Support Full JS Environment (Node / Express)</td>
+                <td style="padding:5px;border: 1px solid #000;">Must</td>
+                <td style="padding:5px;border: 1px solid #000;">New application is being built by VENOMY (Vue, Express; Node and MySQL) stack and both back and front side JS is used, support for SUT Architecture shouldn't be a problem for any modern test framework.</td>
+            </tr>
+            <tr style="border: 1px solid #000;">
+                <td style="padding:5px;border: 1px solid #000;">SUT size & complexity: </td>
+                <td style="padding:5px;border: 1px solid #000;">Must</td>
+                <td style="padding:5px;border: 1px solid #000;">New Chinook platform is mid-size enterprise web application. Possible tools should start simple and can be extend easily.</td>
+            </tr>
+            <tr style="border: 1px solid #000;">
+                <td style="padding:5px;border: 1px solid #000;">OS Support: Linux</td>
+                <td style="padding:5px;border: 1px solid #000;">Must</td>
+                <td rowspan="3" style="padding:5px;border: 1px solid #000;">Development team mainly uses linux based platform for their development and developer uses MAC PC. So unix based support should be "MUST".</td>
+            </tr>
+            <tr style="border: 1px solid #000;">
+                <td style="padding:5px;border: 1px solid #000;">OS Support: MacOS</td>
+                <td style="padding:5px;border: 1px solid #000;">Should</td>
+            </tr>
+            <tr style="border: 1px solid #000;">
+                <td style="padding:5px;border: 1px solid #000;">OS Support: Windows</td>
+                <td style="padding:5px;border: 1px solid #000;">Could</td>
+            </tr>
+            <tr style="border: 1px solid #000;">
+                <td style="padding:5px;border: 1px solid #000;">Data Driven </td>
+                <td style="padding:5px;border: 1px solid #000;">Should</td>
+                <td style="padding:5px;border: 1px solid #000;">New app has data first development approach.</td>
+            </tr>
+            <tr style="border: 1px solid #000;">
+                <td style="padding:5px;border: 1px solid #000;">Price: purchase &lt; 5.000* </td>
+                <td style="padding:5px;border: 1px solid #000;">Should</td>
+                <td style="padding:5px;border: 1px solid #000;">Budget is limited to $10.000</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+
+</html>

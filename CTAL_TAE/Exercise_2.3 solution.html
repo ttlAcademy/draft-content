@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.3 Solution</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="m-10 text-lg">
+    <h2 class="mb-4 font-medium">Exercise 2.3: Analyze and recommend test automation tools -Sample Solution.</h2>
+    <table style="width:100%; border: 1px solid #000;" class="mt-10">
+        <tbody>
+            <tr style="border: 1px solid #000;">
+                <th style="background: rgb(13, 101, 160); color:#fff; padding:5px; border: 1px solid #000;">Test Tool
+                    Requirements</th>
+                <th style="background: rgb(13, 101, 160); color:#fff; padding:5px; border: 1px solid #000;">Weight</th>
+                <th style="background: rgb(13, 101, 160); color:#fff; padding:5px; border: 1px solid #000;">Recommended
+                    Tool</th>
+                <th style="background: rgb(13, 101, 160); color:#fff; padding:5px; border: 1px solid #000;">Explanation
+                </th>
+            </tr>
+            <tr style="border: 1px solid #000;">
+                <td style="background: rgb(231, 208, 164); padding:5px;border: 1px solid #000;">SUT interface: Browser
+                    Testing</td>
+                <td style="background: rgb(231, 208, 164); padding:5px;border: 1px solid #000;">Must</td>
+                <td style="padding:5px;border: 1px solid #000;">Selenium</td>
+                <td style="padding:5px;border: 1px solid #000;">Selenium is de facto one of the biggest drivers for
+                    browser testing and also it is cross platforms.</td>
+            </tr>
+
+            <tr style="border: 1px solid #000;">
+                <td style="background: rgb(231, 208, 164); padding:5px;border: 1px solid #000;">SUT Interface: Mobile
+                    Devices</td>
+                <td style="background: rgb(231, 208, 164); padding:5px;border: 1px solid #000;">Must</td>
+                <td style="padding:5px;border: 1px solid #000;">Apium</td>
+                <td style="padding:5px;border: 1px solid #000;">TAE could have come up with another solution such as
+                    Espresso. Espresso is very stable, fast, and has compact API. It is simpler than Apium. But it is
+                    mainly native code and especially for Android platform. On the other hand TAE needs a tool which
+                    supports cross platform application since development team chose Ionic for mobile development.</td>
+            </tr>
+
+            <tr style="border: 1px solid #000;">
+                <td style="background: rgb(231, 208, 164); padding:5px;border: 1px solid #000;">SUT Interface: API
+                    Testing
+                </td>
+
+                <td style="background: rgb(231, 208, 164); padding:5px;border: 1px solid #000;">Must</td>
+                <td style="padding:5px;border: 1px solid #000;">Postman</td>
+
+                <td style="padding:5px;border: 1px solid #000;">Although other language supports different RESTful
+                    services and libraries to handle API, individual API testing and/or creating mock API for testing
+                    specific tool required. Chinook Enterprise will use API as amain data transition backbone for
+                    different platforms, seperate API testing is important. For consuming API and interact application
+                    GUI still we will use our possible TAS.</td>
+            </tr>
+
+            <tr style="border: 1px solid #000;">
+                <td style="background: rgb(231, 208, 164); padding:5px;border: 1px solid #000;">Automation
+                    Language/Scripting</td>
+                <td style="background: rgb(231, 208, 164); padding:5px;border: 1px solid #000;">N/A</td>
+                <td colspan=2 style="padding:5px;border: 1px solid #000;">
+                    <p>We are not favor of any language but we are favor of requirements. This item depends on SUT
+                        requirements, supporting other test tools mentioned here and development
+                        team environment as well as test team knowledge/experiences. There is no standard format to
+                        evaluate, but we can give some insight as a guidance.</p>
+                    <p>Let's pick three most popular language and evaluate them.</p>
+
+                    <table style="width:100%; border: 1px solid #000;">
+                        <tr>
+                            <th
+                                style="text-align: left; border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">
+                                Item</th>
+                            <th
+                                style="text-align: left; border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">
+                                JS</th>
+                            <th
+                                style="text-align: left; border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">
+                                Python (recommended)</th>
+                            <th
+                                style="text-align: left; border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">
+                                Java</th>
+                        </tr>
+                        <tr>
+
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Selenium</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Support</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Support</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Support</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Apium</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Support</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Support</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Support</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Dev Team
+                                Knowledge</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Very Good</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Good/Familiar
+                            </td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Less Familiar
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Test Team
+                                Knowledge</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Fair Enough</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Very Good</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Familiar</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Test Framework
+                                Range</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Fair Enough</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Very Wide</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Wide</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">
+                                <p>Supported test Type</p>
+                                <p>(Unit, Integ., E2E, D.Driven etc.)</p>
+                            </td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Fair Enough</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Very Wide</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Wide</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr style="border: 1px solid #000;">
+
+            <tr>
+                <td colspan=4 style="padding:5px;border: 1px solid #000;">
+                    <p>This evaluation is just an example. And yet this is situation from language perspective, we can
+                        also
+                        evaluate test automation framework or libraries against our requirements.</p>
+                </td>
+            </tr>
+            <tr style="border: 1px solid #000;">
+                <td style="background: rgb(231, 208, 164); padding:5px;border: 1px solid #000;">JS Test Frameworks</td>
+                <td style="background: rgb(231, 208, 164); padding:5px;border: 1px solid #000;">N/A</td>
+                <td colspan=2 style="padding:5px;border: 1px solid #000;">
+
+                    <table style="width:100%; border: 1px solid #000;">
+                        <tr>
+                            <th
+                                style="text-align: left; border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">
+                                Item</th>
+                            <th
+                                style="text-align: left; border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">
+                                Cypress (Recommended)</th>
+                            <th
+                                style="text-align: left; border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">
+                                Protractor</th>
+                            <th
+                                style="text-align: left; border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">
+                                NightwatchJS</th>
+                        </tr>
+                        <tr>
+
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Selenium-based
+                            </td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">No</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Yes</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Yes</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Mobile Support
+                            </td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">No</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Supports Mobile
+                                Browsers</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Supports Mobile
+                                Browsers</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Automatic Waiting and Debuggability</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Yes/Very Good</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">No/Good</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">No/Good</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Multi-Tab Support
+                            </td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">No</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Yes</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Yes</td>
+                        </tr>
+                        <tr>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Parallel
+                                Execution/Performance</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Supported/Fast</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Supported/Moderate</td>
+                            <td style="border-bottom: 1px dotted rgb(77, 76, 76); padding-bottom:3px;">Supported/Moderate</td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan=4 style="padding:5px;border: 1px solid #000;">
+                    <p>Smiliar to JS framework, you can compare other languages framework such as robot framework,
+                        pytest and behave for Python or JUnit, TestNG for Java. One of the important aspect is
+                        simplicity and productivity matter as well as functionality.</p>
+                </td>
+            </tr>
+
+            <tr style="border: 1px solid #000;">
+                <td style="background: rgb(231, 208, 164); padding:5px;border: 1px solid #000;">Simplicity/Complexity
+                </td>
+                <td style="background: rgb(231, 208, 164); padding:5px;border: 1px solid #000;">Must</td>
+                <td style="padding:5px;border: 1px solid #000;">pytest</td>
+                <td style="padding:5px;border: 1px solid #000;">both TestNG and Cypress initial setup bit complex and
+                    hard to get familiar for junior or new testers. pytest can start very simple and also canbe very
+                    intensive extending its future for enterprise project.</td>
+            </tr>
+
+            <tr style="border: 1px solid #000;">
+                <td style="background: rgb(231, 208, 164); padding:5px;border: 1px solid #000;">Third party integration
+                </td>
+
+                <td style="background: rgb(231, 208, 164); padding:5px;border: 1px solid #000;">Should</td>
+                <td style="padding:5px;border: 1px solid #000;">pytest, Cypress and TestNG</td>
+
+                <td style="padding:5px;border: 1px solid #000;">both TestNG and pytest provide support for Jira
+                    integration. Cypress can also integrate but some options are still under development.</td>
+            </tr>
+
+            <tr style="border: 1px solid #000;">
+                <td style="background: rgb(231, 208, 164); padding:5px;border: 1px solid #000;">RDMS Support and DD
+                    Testing
+                </td>
+
+                <td style="background: rgb(231, 208, 164); padding:5px;border: 1px solid #000;">Should</td>
+                <td style="padding:5px;border: 1px solid #000;">pytest, Cypress and TestNG</td>
+
+                <td style="padding:5px;border: 1px solid #000;">All framework works great with MySQL and provide
+                    support.</td>
+            </tr>
+
+
+            <tr style="border: 1px solid #000;">
+                <td style="background: rgb(231, 208, 164); padding:5px;border: 1px solid #000;">Different OS Support</td>
+
+                <td style="background: rgb(231, 208, 164); padding:5px;border: 1px solid #000;">L:Must, M:Should, W:Could</td>
+                <td style="padding:5px;border: 1px solid #000;">pytest, Cypress and TestNG</td>
+
+                <td style="padding:5px;border: 1px solid #000;">All of them support all three platforms.</td>
+            </tr>
+
+            <tr>
+                <td colspan=4 style="padding:5px;border: 1px solid #000;">
+                    <p>In addition to above mentioned items, price and licence cost should take into consideration for possible TAS.</p>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+
+</html>
