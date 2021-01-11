@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=P, initial-scale=1.0">
+    <title>What is OOP</title>
+
+    <script src="https://ttlacademy.github.io/assets/prism2.js"></script>
+    <link href="https://ttlacademy.github.io/assets/prism2.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        code {
+            background: #000;
+            color: #fff;
+            padding: 1px 4px 1px 4px;
+        }
+
+        h2 {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        h3 {
+            font-weight: bold;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>What Is Object - Oriented Programming?</h2>
+    <p>Object-Oriented Programming <code>(OOP)</code> is a programming concept where different structures, components,
+        and functions
+        of a computer program define, interact and change objects.</p>
+    <p>Before starts this section we are going to summarize OOP. It is
+        essential to understand that OOP is not a language-specific concept. Many popular programming languages such as
+        Java, C++, C#, and of course Python supports OOP. While this is a Python Course this lesson will not be
+        Python - specific. All above - mentioned languages differ when they implement OOP but the common concept is not
+        different.
+    </p>
+    <p>In order to understand this concept, it is better to understand what the object is. An object is anything that
+        has some attributes and can perform some actions. In the programming world, objects got insight from the real
+        world and real objects. Think about it a car. It has many attributes such as color, shape, size, fuel type, etc.
+        and also performs some actions like start engine, move forward, move backward, etc. Keep in mind we mentioned
+        two groups of things attributes and actions.</p>
+    <p>In this example, we are talking about something tangible, a specific instance of cars. When we see a car we can
+        define for example we can say "this is a gray, X Make, A model, sedan, diesel, automatic gear car." Because it
+        is a real instance of the X make car plan.</p>
+    <p>Let's go to the X Car Factory. Probably they have a common plan for all models cars such as A, B, C, D. All
+        models
+        belong to "X Make" and probably they have a common plan for all A models. And also for all engine types and
+        gears.
+        In this case, we are not talking about tangible things. Because they are plans, templates, or blueprints for
+        cars. X
+        Make will produce all cars from these plans. Once they produced they will be tangibles or real instance of this
+        plan or we can call they will be objects of plans.
+    </p>
+    <h2>Main Principles of Object - Oriented Programming</h2>
+    <h3>Classes and Objects</h3>
+    <div class="flex">
+        <div class="w-4/5">
+            <p>
+                In the programming world, those blueprints and plans are <code>Classes</code>. So we can say whereas the
+                classes
+                are templates and blueprints for objects, an object is an instance of a class.
+            </p>
+            <p>Let's this time give an example from a program. Consider a scenario we are building a space shooter game
+                using OOP.
+                What would be the first things we need to define as objects in this game that have some attributes and
+                can
+                perform
+                some actions? Probably one of your answers would be a space ship. To achieve this goal we need to define
+                the
+                <code>space ship</code> class. In this class, we would define and store specifications that is common
+                for all spacecraft.
+                In this way, it would be easy to create a spacecraft from this blueprint. This
+                spacecraft should be able to move and shoot. So we would define 2 functions. And for common features, we
+                would define variables for width, height, wing-size, color, level, health, shield, power, etc. But we
+                would not initialize them. we would not give any value to them. Because this is plan, class. When it
+                comes to specific object under the this class, in our case each spacecraft would have different data for
+                these features. it is best to assign the values when we create the object rather than class itself.
+            </p>
+            <p>
+                For instance look at the picture an example of game scenes. Each of the spacecraft that begin the game
+                on different position than one another. And each of them has different color and different size.
+                Initializing the position variable (assign a value to position variable) in the <code>SpaceCraft</code>
+                class means each spacecraft object created from this class to begin with the same position which we
+                don't want. Similarly If you initialize color in the class, for example "red" then each spacecraft
+                object created from this class to begin game with red color. Unless we want this result it is not handy.
+            </p>
+            <img src="./class_craft.svg">
+        </div>
+        <div class="w-1/5">
+            <img src="./dd.png">
+        </div>
+    </div>
+    <p>However each of the spacecraft would behave similar in terms of place it could move to based on its position and
+        therefore it is best to define <code>move()</code> function inside class instead of repeating same thing
+        inside each of spacecraft object.</p>
+    <p>As a result we can say whereas the SpaceCraft class represents any given spacecraft, a spacecraft object
+        represents only one singular spacecraft. From this moment we know what class and object are then let's create
+        our first pseudo code class without concerning any language.</p>
+
+    <p>Our First Human Readable Class</p>
+
+    <pre class="line-number" style="margin-bottom: 30px"><code class="language-python">class SpaceCraft
+    # common attributes
+    its color =  any given color
+    its height = any given height
+    its width = any given width
+    its wing size = any given wing Size
+    its position x = any given coordinate position x
+    its position y = any given coordinate position y
+    its health = any given health
+    its shield = any given shield
+    its power = any given power
+    its side = any given side
+
+    #then class action
+    move right()
+        do something to move right.
+
+    move left()
+        do something to move left.
+
+    move forward()
+        do something to move forward.
+
+    move backward()
+        do something to move back.</code></pre>
+    <p>Great, we created our first pseudo (human readable common language) class. Now we can create as many spacecraft
+        as we want from this blueprint.
+    </p>
+    <img src="./clas_craft_blueprint.svg">
+
+    <p>Again we are creating some instance from our class using pseudo code. Below we are creating our ship. enemy ships
+        can be created in same way as well.</p>
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">my_ship = new SpaceCraft
+    (
+    orange,
+    100 unit (height),
+    120 unit (width),
+    medium (wing-size),
+    40(x),
+    10(y)
+    65(health),
+    35(shield),
+    55(power),
+    side(our fleet)    
+    )</code></pre>
+
+    <p>As we created our spacecraft we can call its functions. In class we call functions as <code>methods</code>. Each
+        object created from a class has the same methods.</p>
+    <pre><code class="language-python">my_ship.move right()
+#my_ship moved to right 1 unit</code></pre>
+
+    <h3>Abstraction</h3>
+    <p>
+        This is another and useful principle of OOP. The main idea here to show only the necessary information and keep
+        the rest of the thing hidden. Think about the remote control of the TV. We don't know how the remote control
+        works exactly, which electrical circuit placed inside. We don't have to worry about that. All we need to know is
+        how we can turn on the TV, how to increase or decrease volume, how to change the channel. These buttons are kind
+        of interface we can interact with TV. Today modern TV provider they create very cool remote controls but those
+        interfaces still there and their changes do not affect our usage, actually we don't much care. We care if we can
+        still interact using these interfaces or not. All in all we need to understand the necessary information.
+    </p>
+
+    <p>
+        Come back to our example, similar to the above example our classes should behave like a remote control. Users
+        even other developers of this game should not worry about the inner details of our SpcaCraft class. They all
+        need to know how to interact with this class and how to use it. It is crucial, especially since our program is
+        getting complex. Consider you have to work in the development team for this game. Your teammate is developing
+        obstacles. Wouldn't be nice of your <code>SpaceCraft</code> class able to interact with your teammate class
+        without knowing all details about your teammate class. To achieve this you and your teammate need to provide
+        interfaces that establish communication between classes. Typically these interfaces are class methods. You don't
+        have to know the implementation of the class. You need to know how to use them.
+    </p>
+
+    <p>
+        The second advantage of the abstraction is each different section or component (a class or a group of classes)
+        can de be developed independently. Look at the picture below. Another teammate is taking care of buttons. If he
+        makes a change, this change shouldn’t directly affect your SpaceCraft class. If you agree on interfaces as long
+        as he is loyal to agreed communication rules and interfaces, you don’t much care about his changes, his new
+        codes, debugs. Because of abstraction different sections of the program can progress independently.
+    </p>
+    <img src="./class_craft_abstract.svg">
+
+    <h3>Encapsulation</h3>
+
+    <p>This principle refers to packaging data with functions that these functions can do transactions (CRUD) on that
+        data inside a class. The main idea here protect class data (attributes) and hide them or avoid direct
+        interactions outside of the class. But this does not mean other classes can not reach this data. The instance of
+        other classes can reach our class attributes through our class methods. These methods generally called as
+        <code>getters</code> and <code>setters</code>.
+    </p>
+    <img src="./class_craft_getset.svg">
+    <p>Back to our example, during our game, if we need to see our spacecraft <code>my_ship</code> health, we can call
+        <code>my_ship.get_health()</code> method. Nobody should directly access health attributes like this <code><span
+        style="text-decoration: line-through;">my_ship.health</span></code>.
+    </p>
+    <p>
+        Setting attributes inside methods also gives flexibility and full control to the developer. Consider when we
+        level
+        up in the game, our health should be increased (updated). So instead of setting attributes individually, control
+        these values inside <code>level_up()</code> method is more effective. In this case we can keep track of
+        attributes
+        depend on one another.
+    </p>
+    <p>
+        Moreover, some of the attributes should be read-only from outside of the class for example wing size or color.
+        Such this case you can define only getter methods but no setter method.
+    </p>
+    <p>Remember our <code>SpaceCraft</code> class. Let's modify this class using pseudo code again and add getter and
+        setter for health attributes. <code>...</code> are remains unchanged.</p>
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">class SpaceCraft
+    # common attributes
+    ...
+    its health equals to any given health
+    ...
+
+    #then class action
+    ...
+    
+    get health()
+        return its health
+    
+    set health(new health)
+        its health equals new health
+    </code></pre>
+
+    <p>In the above code, we have two new methods. We modify the health with <code>set health() method</code> whereas we
+        get health with <code>get health()</code> method. When we want to change our logic and modifying our data we
+        need to change these methods. For example if health depends on level we can implement in our class. Consider
+        each level we are getting additional 20 health up to 3rd level and then additional 50. in this case we can
+        add some validation or logic to our setter.
+    </p>
+
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">class SpaceCraft
+    # common attributes
+    ...
+    
+    #then class action
+    ...
+    
+    set health(level)
+        if level equals to 1 then health is 50
+        if level equals to 2 or 3 then health is current health + 20
+        if level is bigger than 3 then health is current health + 50
+    </code></pre>
+    <h3>Inheritance</h3>
+    <p>This main principle enables us to create new classes from other classes. New classes can inherit attributes and
+        methods from other classes. Let's look at an example again to our example. Our game is growing. Once user gains
+        more bonus and points in the game he can unlock specific power spacecrafts. At first we establish a spacecraft
+        class and it consists of many of the attributes and methods common to all spacecrafts. We decide to create
+        different classes to represent different type spacecrafts according to their special weapons such as FireCraft,
+        WaterCraft, etc. FireCrafts can move slow but fires really big fire balls, WaterCraft can move faster
+        but damage of its weapon gives less damage then FireCraft something like that. So these abilities can represent
+        with different attributes as well. However they share still much attributes as common as they members of
+        SpaceCraft class. We can call <code>SpaceCraft</code> class is a parent class or superclass for these new
+        classes. <code>WaterCraft</code> and <code>FireCraft</code> Classes are subclasses of SpaceCraft class. They
+        extend their parent class. Many of the attributes and methods will be available inside new subclasses. You can
+        extend this sub classes to more subclasses as well. If you need more hierarchy layers. For example, WaterCraft
+        class can be extended to IceBall, DropRain, FrozenKing. You get the idea.</p>
+    <img src="./class_craft_inheritance.svg">
+</body>
+
+</html>
