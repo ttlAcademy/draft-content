@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ttlacademy.github.io/assets/prism2.js"></script>
+    <link href="https://ttlacademy.github.io/assets/prism2.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Functions Exercises</title>
+</head>
+
+<body>
+    <style>
+        .accordion {
+            position: relative;
+            margin: 2px;
+            max-width: 80vw;
+        }
+
+        .accordion input[type=checkbox] {
+            display: none;
+        }
+
+        * only checkbox-label*/ .accordion input {
+            display: none;
+            /*regular checkbox will not be visible*/
+        }
+
+        .accordion label {
+            display: block;
+            background: #2c3e50;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .accordion label::after {
+            content: "\25b6";
+            /*ASCII code, ths is small arrow   \039e hamburger menu*/
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            display: block;
+            transition: all 0.6s;
+        }
+
+        .accordion input[type=checkbox]:checked+label::after {
+            transform: rotate(90deg);
+            /*Always start counter clock (first right)*/
+        }
+
+        /* Description itself */
+        .accordion_content {
+            overflow: hidden;
+            /*key line is here Be careful, Game Rules still there but overflow closed.*/
+            background: #ccdef9;
+            transition: max-height 0.6s;
+            max-height: 0;
+        }
+
+        .accordion_content p {
+            margin: 10px;
+        }
+
+        .accordion input:checked~.accordion_content {
+            max-height: 100vh;
+            /*suddenly we change height then it will be visible because overflow now open*/
+        }
+    </style>
+    <h3>Exercise 1</h3>
+    <p>Consider a shared bicycles system. Bicycles fee consists of two parts. Standard rate and rate per km. Standard
+        fee is €1.50, plus €0.15 for every 100 meters traveled. Write <code>calculate_fee()</code> function that takes
+        only one argument as the distance covered (in kilometers as float for instance: 2.1) and returns the total fee
+        as a result. Then print out fee as pass this function to the <code>print()</code> function</p>
+
+    <section class="row">
+
+        <!--Description and Rules added.-->
+        <article class="accordion">
+            <input id="tab-1" type="checkbox" name="tab">
+            <label for="tab-1">Don't Remember Rules just check it!</label>
+            <div class="accordion_content">
+                <p>
+                <pre class="line-numbers" style="margin-bottom: 10px"><code class="language-python"># We put these variables in global scope not in function scope
+    # in case rate and fee might change in the future.
+    
+    base_fee = 1.5
+    travel_rate = 0.15 # (per 100 meters)
+    
+    def calculate_fee(distance): # takes parameter as km.
+        distence_as_meter = distance * 1000
+        travel_fee = distence_as_meter * travel_rate / 100 #each 100th meter
+        total_fee = base_fee + travel_fee
+        return total_fee
+    
+    print("Total fee: €", calculate_fee(2.2))</code></pre>
+                </p>
+            </div>
+        </article>
+    </section>
+
+
+    <h3>Exercise 2 - Digital Time Display</h3>
+    <p>Create a function that takes duration as parameter in seconds then convert it to a digital time as we have in the
+        digital watches. But our function should show also days if the hour is bigger than 24. Function will return
+        digital time
+        output. The output should be <code>D:HH:MM:SS</code> or <code>D:H:M:S</code> format. Your values can be 1 or 2
+        digits both accepted. The form is "D/DD, H/HH, M/MM, and S/SS" which represents days, hours, minutes and
+        seconds.
+    </p>
+
+
+    <div class="accordion"><input id="tab-2" name="tab" type="checkbox" />
+        <label for="tab-2">Exercise2 Possible Solution!</label>
+        <div class="accordion_content" style="margin-top: -30px;">
+            <pre class="line-numbers" style="margin-bottom: 10px;"><code class="language-python"># We put these variables in global scope not in function scope
+# User input's type is always string, change to int.
+# Assuming that we always read numeric value
+
+raw_seconds = int(input("Please enter number of seconds: "))
+
+# let's start the biggest unit which is day.
+# Each 86400 sec is 1 hour
+# we are using exact number divide operator omitting decimal point
+days = raw_seconds  // 86400
+
+# As we calculated days part, total raw_seconds shouldn't be bigger than a day
+# So we used remain operator to calculate possible max seconds less than a day.
+raw_seconds = raw_seconds % 86400 # ()
+
+# Next one hours, each 3600 sec is 1 hour
+hours = raw_seconds // 3600
+
+# As we calculated hours part, total raw_seconds shouldn't be bigger than a hour
+# So we used remain operator to calculate possible max seconds less than a hour.
+raw_seconds = raw_seconds % 3600
+
+# After hour, calculate minutes
+# Each 60 sec is 1 minute
+minutes = raw_seconds // 60
+
+# Now we know that the remaining raw_seconds is not bigger than a minute.
+# Only we need to calculate how many seconds remaining
+# using '%' operator again and the last time
+seconds = raw_seconds % 60 # (Only for seconds use remain operator)
+
+print(f"The digital wtach form: {days}:{hours}:{minutes}:{seconds}")</code></pre>
+        </div>
+    </div>
+</body>
+
+</html>

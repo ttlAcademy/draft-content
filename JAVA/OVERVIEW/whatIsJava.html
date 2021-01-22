@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Java?</title>
+    <script src="https://ttlacademy.github.io/assets/prism2.js"></script>
+    <link href="https://ttlacademy.github.io/assets/prism2.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        h2 {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        h3 {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        h4 {
+            font-weight: bold;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-200 font-sans flex flex-col items-center">
+    <header class="bg-blue-800 w-full px-4 py-2 flex justify-center border-b-4 border-pink-600">
+        <div class="w-full w-screen max-w-2xl">
+            <div class="flex items-center justify-between">
+                <h4 class="w-32 text-indigo-100">ttl.academy</h4>
+            </div>
+            <div class="my-3">
+                <h3 class="text-2xl text-indigo-200">What is Java How does it Work?:
+                    <span class="text-gray-100">Introduction</span>
+                </h3>
+            </div>
+        </div>
+    </header>
+    <main class="w-full flex flex-col items-center">
+        <div class="w-full w-screen mt-8 max-w-4xl mx-2 px-4">
+            <h2>Welcome</h2>
+            <p>Hi there, welcome to the Java Basics Course. Java is one of the most popular programming languages. This
+                course was created to help you systematically understand How Java works. During this lesson, we try to
+                explain what is Java and what a Java program is.
+                We would like to mention a bit more on how you get started with java development, how java works and
+                what you need to develop a java program. We assume you have already installed your environment for Java
+                development and you have IDE for writing JavaCode. If not please follow the course Setup for Java <a
+                    href="#">here</a></p>.
+        </div>
+
+        <div class="w-full w-screen mt-8 max-w-4xl mx-2 px-4">
+            <h2>What is Java?</h2>
+            <p>Java is a class-based, object-oriented programming language which allows a developer to define a type of
+                data with its set of assets and operation. It enable us to
+                <code>write code once and run anywhere (WORA)</code>. It means it is platform-independent. Java code can
+                run on all platforms. But how this is possible, we will explain in the following lines.
+            </p>
+
+            <h2>IDE --> JDK --> JRE --> JVM</h2>
+            <p>Java code is text file with <code>.java</code> extension nothing more nothing else. But the power of java
+                is its structure. As we mentioned its platform-independent. Java program needs Java Runtime Environment
+                (JRE) to be installed.</p>
+
+            <h3>JRE</h3>
+            <p>JRE stands for Java Runtime Environment. Without JRE we cannot run Java programs. It contains runtime
+                libraries and Java application launcher that are necessary to run programs written in Java Language. The
+                most important part of JRE is Java Virtual Machine (JVM).</p>
+
+            <h3>JVM</h3>
+            <p>JVM creates an environment in which Java programs interact with hardware no matter operation system is.
+                This is the minimum requirement to run Java. If we want to develop a Java application then we need Java
+                Development Kit(JDK).</p>
+
+            <h3>JDK</h3>
+            <p>If you have only JRE, you can run Java programs but you can not develop applications. For this purpose
+                we need JDK. JDK is a development environment for building applications, applets, and components using
+                the Java programming language. JDK includes JRE plus the development tools (such as compiler and
+                debugger). The good thing is once you install JDK you don't have to install JRE again.</p>
+            </p>
+
+            <img src="https://www.ttl.academy/wp-content/uploads/2021/01/java_dev_env.svg" alt="JDK and layers">
+
+            <p>Once developer creates source code as <code>.java</code> file, an executable java program generated from
+                the source code and this is called <code>Java bytecode</code>. Java bytecode file extension is
+                <code>.class</code>. JDK is responsible to this generation.
+            </p>
+            <h3>IDE</h3>
+            <p>Of course we need a text editor to write our source code (<code>.java</code> files.) We can even use
+                notepad, but popular code editors come with tons of handy tools and extension to make programming easy.
+                Since they understand the syntax of our code and offer different type of assistance such as debugging,
+                code completion, code intelliSense, they are more than a text editor. Literally they are called
+                Integrated Development Environment (IDE). Popular IDEs for Java include IntelliJ, Eclips, Netbeans and
+                nowadays Visual Studio Code.
+            </p>
+            <p>We shortly briefed about Java development environment and component of this environment depicted in the
+                below picture.
+            </p>
+            <img src="https://www.ttl.academy/wp-content/uploads/2021/01/java_dev_env_tasks.svg"
+                alt="Java Development Environment">
+        </div>
+
+        <div class="w-full w-screen mt-8 max-w-4xl mx-2 px-4">
+            <h2>Our First Java Program, "Hello Java"</h2>
+            <p>Now we can observe Java in action. For this purpose let us start writing our first Java program. It will
+                be popular Hello, Java! codes. You may use your editor or IDE but simple notepad is enough for the first
+                time. Open your editor and write down below codes and save as <code>HelloJava.java</code></p>
+
+            <pre class="line-numbers" style="margin-bottom: 10px;"><code class="language-java">public class HelloJava {
+    public static void main ( String [] args ) {
+        System .out. println ( "Hello , Java!" );
+    }
+}</code></pre>
+            <p>Executing this codes produces a simple single line printout: <code>Hello, Java!</code>Using this example
+                we are going to learn some important features of Java programs and mention a bit more on how compilation
+                works in Java.</p>
+        </div>
+        <div class="w-full w-screen mt-8 max-w-4xl mx-2 px-4">
+            <h2>The Source Code and Compilation</h2>
+            <p>After saving your first Java files open your terminal and go to directory in which your the
+                <code>HelloJava.java</code> is saved. To compile the source code <code>HelloJava.java</code> in a
+                command line interface, type below command:
+            </p>
+            <pre style="margin-bottom: 10px;"><code class="language-bash">javac HelloJava.java</code></pre>
+            <p>If you don't get an ERROR, a file named <code>HelloJava.class</code> is created. This is the bytecode of
+                the our program and it is called <b>class file</b>. If you compiled before and the same class file
+                already exists under the same directory, then the file is overwritten after new successful compilation.
+                Open your file explorer, go to your directory and make sure the class file was compiled. Now we can
+                execute this bytecode write below command:</p>
+            <pre style="margin-bottom: 10px;"><code class="language-bash">java HelloJava</code></pre>
+            <p>This command execute our <code>.class</code> file and produces output: <code>Hello, Java!</code></p>
+        </div>
+        <div class="w-full w-screen mt-8 max-w-4xl mx-2 px-4">
+            <p>Let's come back to our source code and please focus on first line <code>public class HelloJava</code>.
+                This code states that:
+                (a) this is a class,
+                (b) the class name is HelloJava,
+                (c) this class is accessible from all other Java program components.
+
+                The keyword <code>public</code> specifies that the class is accessible from other program units. These
+                types of keyword called as access modifiers.
+                There are three modifiers in Java: public, private, and protected. If you don't specify modifiers, the
+                default modifier is taken from Java package.
+                Every source file in Java has the file extension .java. In a single .java file, we can define more than
+                one class. In such a case, at most one class may be public. if a source file contains a class with the
+                public access modifier, the name of the class must match the file name. For example,
+            </p>
+            <pre class="line-numbers" style="margin-bottom: 10px;"><code class="language-java">public class Foo
+{
+...
+}
+class Bar
+{
+...
+}</code></pre>
+            <p>is acceptable as long as the file name is Foo.java. Yes, if we have public class in our java file, this
+                file's name should match with public class name. Let us test this rule with our <code>Hello Java</code>
+                program. If the class name is changed from HelloJava to just Hello while the file name remains the same,
+                HelloJava.java:</p>
+            <pre class="line-numbers" style="margin-bottom: 10px;"><code class="language-java">public class Hello {
+    public static void main ( String [] args ) {
+        System .out. println ( "Hello , Java!" );
+    }
+}</code></pre>
+            <p>if you compile the source code (javac HelloJava.java), compile the compilation produces the following
+                error message:</p>
+            <pre class="line-numbers" style="margin-bottom: 10px;"><code class="language-bash">$ javac HelloJava.java
+HelloJava.java:1: error: class Hello is public, should be declared in a file named Hello.java
+public class Hello {
+       ^
+1 error</code></pre>
+
+            <p>
+                The first statement of the error message state the cause of the error, which is that, to define a class
+                by the name of Hello, the file name must be Hello.java. The next statement specify where is the error
+                occurred using the “caret” symbol ^. It tells us the error is at the class declaration. The last line of
+                the error message is the total number of errors found in the source code.</p>
+            <p>Keep file name as it is, HelloWorld.java remove public modifiers from the class like this one:
+            </p>
+
+            <pre class="line-numbers" style="margin-bottom: 10px;"><code class="language-java">class Hello {
+    public static void main ( String [] args ) {
+        System .out. println ( "Hello , Java!" );
+    }
+}</code></pre>
+            <p>if you compile the source code again (javac HelloJava.java), the code compiles, but the .class generated
+                is <code>Hello.class</code>, not HelloJava.class.</p>
+        </div>
+
+    </main>
+</body>
+
+</html>

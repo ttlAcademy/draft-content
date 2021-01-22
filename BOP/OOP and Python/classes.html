@@ -90,6 +90,165 @@ print(third_car.move_forward(5))</code></pre>
     <p>The output:</p>
 
     <pre style="margin-bottom: 30px"><code class="language-python">Volvo has moved 5 unit.</code></pre>
+
+    <h3>Encapsulation</h3>
+    <p>As other OOP Programs, we can restrict access to attributes and methods in Python. Single <code>_</code> refers
+        protected members and can be accessed from within the class and its subclasses. Double underscore
+        <code>__</code>
+        refers private members and can be accessible by only its own class. Not by subclasses or instances.
+    </p>
+    <p><code>...</code> remains as same.</p>
+
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">class Car:
+    ...
+    
+    # attributes
+    def __init__(self, make, color):
+        ...
+        self.__max_speed = 220
+    
+    # methods
+    ...
+
+    def get_max_speed(self):
+        return self.__max_speed
+    
+    def set_max_speed(self, speed):
+        self.__max_speed = speed</code></pre>
+
+    <p>In the above codes, we defined new private attribute <code>__max_speed</code>. This variable can be accessible
+        only
+        inside this class. If we try to access this class from object,</p>
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">new_car = Car("Audi", "Blue")
+print(new_car.__max_speed)</code></pre>
+
+    <p>we get an error.</p>
+    <pre style="margin-bottom: 30px"><code class="language-python">Traceback (most recent call last):
+    File "d:\REPOS\Python\my_app\classes\basic_class.py", line 2, in <module>
+        print(new_car.__max_speed)
+AttributeError: 'Car' object has no attribute '__max_speed'</code></pre>
+
+    <p>We can access and modify these types of attributes via getters and setters.</p>
+
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">new_car = Car("Audi", "Blue")
+max_speed = new_car.get_max_speed()
+print("Max Speed is:", max_speed)
+
+new_car.set_max_speed(240)
+max_speed = new_car.get_max_speed()
+print("Max Speed updated:", max_speed)</code></pre>
+
+    <p>The output:</p>
+    <pre style="margin-bottom: 30px"><code class="language-python">Max Speed is: 220
+Max Speed updated: 240</code></pre>
+
+    <h3>Inheritance</h3>
+    <p>Inheritance enables us to define a class that inherits attributes and methods from another class. The basic
+        syntax of inheritance of Python is provided below. We call parent class as <code>BaseClass</code> and child
+        class as <code>SubClass</code>. We are sending parent class as a parameter to child class.</p>
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">class BaseClass:
+    # class attributes
+    # class methods
+
+class Subclass(BaseClass):
+    # class attributes
+    # class methods</code></pre>
+    <p>Come back to our car class, let's create new child class (subClass) from car class. Under the child class
+        <code>__init__()</code> function, we are calling parent's <code>__init__()</code> function. In this way we are
+        keeping inheritance of the parent's <code>__init__()</code>.
+    </p>
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">class RaceCar(Car):
+        
+    # constructor
+    def __init__(self, make, color):
+        # call parent (super) class
+        Car.__init__(self, make, color)
+        Car.set_max_speed(self,360)
+
+    # methods (It has parent methods, also we can define additional methods)
+    def move_faster(self):
+        return "I can move faster than ever."</code></pre>
+
+    <p>Now we can initiate objects from this new child class and can use both parent's and its methods and also
+        attributes.</p>
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">regular_car = Car("Toyota", "Silver")   
+print(regular_car.make, "Max Speed: ", regular_car.get_max_speed())
+print(regular_car.move_forward(2))
+
+new_car = RaceCar("Maclaren", "Red")
+print(new_car.make, "Max Speed: ", new_car.get_max_speed())
+print(new_car.move_forward(5))
+print(new_car.make, "says: ", new_car.move_faster())</code></pre>
+
+    <p>The output:</p>
+    <pre style="margin-bottom: 30px"><code class="language-python">Toyota Max Speed:  220
+Toyota has moved 2 units.
+
+Maclaren Max Speed:  360
+Maclaren has moved 5 units.
+Maclaren says:  I can move faster than ever.
+</code></pre>
+    <h3>Polymorphism</h3>
+    <p>This principle explains that the interface, function or condition can exist in different shape or different
+        formats. It is one of the main concepts in OOP. With the help of Polymorphism, one method or object can play
+        different types of role in different conditions and scenarios. Let's have a look how it works in Python.</p>
+    <h4>Operator Overloading</h4>
+    <p>Before we learned about addition <code>+</code> operator. This operator has different role for numeric types from
+        string data types. It is mathematical addition for numeric types whereas same operator works as concat operator
+        for strings.</p>
+    <pre style="margin-bottom: 30px"><code class="language-python">number_01 = 5
+number_02 = 3
+print(number_01 + number_02)</code></pre>
+    <p>The above code print <code>8</code> as a result since both types are integer. For string it concatenates two
+        variables.</p>
+
+    <pre style="margin-bottom: 30px"><code class="language-python">first_name = 'Wouter'
+last_name = 'Superman'
+print(first_name + ' ' + last_name)</code></pre>
+
+    <p>This time it result will be <code>Wouter Superman</code>. So we have same operator in different operations. This
+        is <code>operator overloading</code> in Python and it is simple type of polymorphism</p>
+    <h4>Method Overriding in Classes</h4>
+    <p>Like other OOP languages, Python supports methods overriding. In this type of polymorphism, we can write methods
+        with same name but they might behave different in child classes from parent classes. Look at below example.</p>
+    <p></p>
+
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">class Car:
+             
+        # attributes / constructor
+        ...
+        
+        # methods
+        def move_forward(self, unit):
+            return f"{self.make} has moved {unit} unit."</code></pre>
+
+
+    <pre class="line-numbers" style="margin-bottom: 10px"><code class="language-python">class RaceCar(Car):
+    
+    # constructor
+    ...
+
+    # methods
+    ...
+    def move_forward(self, unit):
+    return f"{self.make} has moved {2 * unit} unit."</code></pre>
+
+    <p>Here, when we create instances and call the overridden method, we can see <code>move_forward()</code> method will
+        create different results in the base and child classes. Python uses methods defined in the child class and
+        overrides to parent class methods.</p>
+
+    <pre class="line-numbers" style="margin-bottom: 30px"><code class="language-python">regular_car = Car("Toyota", "Silver")
+print(regular_car.move_forward(5))
+
+new_car = RaceCar("Maclaren", "Red")
+print(new_car.move_forward(5))</code></pre>
+
+    <p>The output:</p>
+    <pre style="margin-bottom: 30px"><code class="language-python">Toyota has moved 5 units.
+
+Maclaren has moved 10 units.</code></pre>
+
 </body>
+
 
 </html>

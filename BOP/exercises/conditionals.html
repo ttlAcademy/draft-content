@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ttlacademy.github.io/assets/prism2.js"></script>
+    <link href="https://ttlacademy.github.io/assets/prism2.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Functions Exercises</title>
+</head>
+
+<body>
+    <style>
+        .accordion {
+            position: relative;
+            margin: 2px;
+            max-width: 80vw;
+        }
+
+        .accordion input[type=checkbox] {
+            display: none;
+        }
+
+        * only checkbox-label*/ .accordion input {
+            display: none;
+            /*regular checkbox will not be visible*/
+        }
+
+        .accordion label {
+            display: block;
+            background: #2c3e50;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .accordion label::after {
+            content: "\25b6";
+            /*ASCII code, ths is small arrow   \039e hamburger menu*/
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            display: block;
+            transition: all 0.6s;
+        }
+
+        .accordion input[type=checkbox]:checked+label::after {
+            transform: rotate(90deg);
+            /*Always start counter clock (first right)*/
+        }
+
+        /* Description itself */
+        .accordion_content {
+            overflow: hidden;
+            /*key line is here Be careful, Game Rules still there but overflow closed.*/
+            background: #ccdef9;
+            transition: max-height 0.6s;
+            max-height: 0;
+        }
+
+        .accordion_content p {
+            margin: 10px;
+        }
+
+        .accordion input:checked~.accordion_content {
+            max-height: 100vh;
+            /*suddenly we change height then it will be visible because overflow now open*/
+        }
+    </style>
+
+    <h3>Exercise - Primitive Calculator</h3>
+
+
+    <h3>Exercise - Guess Number</h3>
+    <p>Create a guess number game program for two players. it asks the first player to enter a number between 1 and 100
+        like "Please enter number between 1 and 100". Program takes this number then ask the second player to guess this
+        number like "Please guess the number between 1-100". If the second player estimates bigger number,
+        program should say "it is too big, guess smaller number" if guessed number is smaller than stored number program
+        should say "it is too small guess bigger number" Program should ask till the second player find correct stored
+        number. If any of the players enter different character than numbers your program should warn user and ask user
+        to enter number between 1 and 100 again. (Hint while loop - if statement)
+    </p>
+
+
+    <div class="accordion"><input id="tab-2" name="tab" type="checkbox" />
+        <label for="tab-2">Exercise - Guess Number Possible Solution!</label>
+        <div class="accordion_content" style="margin-top: -30px;">
+            <pre class="line-numbers" style="margin-bottom: 10px;"><code class="language-python">player1_turn = False
+player2_guess = False
+player1_number = input('Please keep a number between 1-100: ')
+
+while player1_turn == False:
+    try:
+        player1_number = int(player1_number)
+        if (player1_number >= 1 and player1_number <=100):
+            player1_turn = True
+        else:
+            print('Please enter number between 1 and 100')
+            player1_turn = False
+            player1_number = input('Please keep a number between 1-100: ')
+    except ValueError:
+        print("That's not a number!")
+        player1_number = input('Please keep a number between 1-100: ')
+
+print("Now Change Turn, don't tell your number to Player2")
+
+player2_number = input('Please guess a number between 1-100: ')
+while player2_guess == False:
+    try:
+        player2_number = int(player2_number)
+        if (player2_number >= 1 and player2_number <=100):
+            if player2_number > player1_number:
+                print('Your number is bigger than the target number, try again')
+                player2_number = input('Please guess a number between 1-100: ')
+            elif player2_number < player1_number:
+                print('Your number is smaller than the target number, try again')
+                player2_number = input('Please guess a number between 1-100: ')
+            else:
+                print('CONGRATULATIONS YOU NAILED IT')
+                player2_guess = True
+        else:
+            print('Please enter number between 1 and 100')
+            player2_number = input('Please guess a number between 1-100: ')
+    except ValueError:
+        print("That's not an number!")
+        player2_number = input('Please guess a number between 1-100: ')</code></pre>
+        </div>
+    </div>
+</body>
+
+</html>

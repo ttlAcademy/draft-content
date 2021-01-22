@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Java Introduction</title>
+    <script src="https://ttlacademy.github.io/assets/prism2.js"></script>
+    <link href="https://ttlacademy.github.io/assets/prism2.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        h2 {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        h3 {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        h4 {
+            font-weight: bold;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-200 font-sans flex flex-col items-center">
+    <header class="bg-blue-800 w-full px-4 py-2 flex justify-center border-b-4 border-pink-600">
+        <div class="w-full w-screen max-w-2xl">
+            <div class="flex items-center justify-between">
+                <h4 class="w-32 text-indigo-100">ttl.academy</h4>
+            </div>
+            <div class="my-3">
+                <h3 class="text-2xl text-indigo-200">Set up Java:
+                    <span class="text-gray-100">Introduction</span>
+                </h3>
+            </div>
+        </div>
+    </header>
+    <main class="w-full flex flex-col items-center">
+        <div class="w-full w-screen mt-8 max-w-4xl mx-2 px-4">
+            <h2>Welcome</h2>
+            <p>Hi there, welcome to the Java set-up. This set-up serves as prerequisite for all the courses that
+                make use of Java Courses. We are going to make sure you can start writing your application after this
+                tutorial.
+            </p>
+
+            <p>Before jump into the installation, it is better to understand Java Development Environment. </p>
+            <h3>JRE</h3>
+            <p>JRE stands for Java Runtime Environment. Without JRE we cannot run Java programs. It contains runtime
+                libraries
+                and Java application launcher that are necessary to run programs written in Java Language.</p>
+            <h3>JDK</h3>
+            <p>If you have only JRE, you can run Java programs but you can not develop application. For this purposes we
+                need
+                JDK. JDK stands for Java Development Kit.The JDK is a development environment for building applications,
+                applets, and components using the Java programming language. JDK includes JRE plus the development tools
+                (such
+                as compiler and debugger). Because JRE is inside JDK, you should install JDK to both write and run Java
+                programs.</p>
+        </div>
+        <div class="w-full w-screen mt-8 max-w-4xl mx-2 px-4">
+            <h2>Previous Set-up</h2>
+            <p>If you think that in the past you’ve set-up Java but are not sure if your set-up is correct, follow the
+                instruction according to your operation system.</p>
+            <p>We recommend that you have version 8 since it is very common and many of the project still it is in use.
+                On
+                the
+                other hand Java SDK 11 is the latest stable version and has long term support (LTS) version at the
+                moment we
+                have written this tutorial. Although you can install multiple versions of JDK/JRE concurrently, it can
+                be
+                easily
+                messy. Which version should you use depends on your environments and project requirements. For example
+                if
+                you
+                explicitly use VS Code as an IDE you need to use Java SE 11 to completely setup and run your code. If
+                you
+                are
+                using a test framework, many of them work well together with Java version 8. All in all the aim is here
+                to
+                show
+                you how you can setup correctly your environment. If you have Java 8 or 11 installed, you can skip this
+                tutorial.</p>
+            <h3>On Windows</h3>
+            <p>Open PowerShell and try executing the following statements to check it out.</p>
+
+            <pre style="margin-bottom: 10px;"><code class="language-java">javac -version</code></pre>
+
+            <p>If you get a response with the version number and it looks somewhat like the following output, it means
+                you
+                have
+                Java SDK installed.</p>
+
+
+            <pre style="margin-bottom: 10px;"><code class="language-java">javac 11.0.6</code></pre>
+
+            <p>Look at version above, 11. This version is known as <code>Java 11</code></p>
+
+            <p>If you get an error message like the following one, your setup is not correct and you should follow this
+                course
+                and move forward.</p>
+            <pre style="margin-bottom: 10px;"><code class="language-jv">PS C:\>javac -version
+The term 'javac' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:6
++ javac <<<<  -version
+    + CategoryInfo          : ObjectNotFound: (javac:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException</code></pre>
+            <h4>Uninstall Old Version From Windows</h4>
+            <p>If you have older version than version <code>Java 8</code>, we recommend uninstall this version from your
+                PC
+                before proceeding with this course unless you explicitly need older version for some reasons. To do
+                this,
+                open
+                the start menu, type “programs” and click on “add or remove programs”</p>
+            <p>In the apps & features list, look for java and remove all versions of java other than version 8 or
+                version
+                11.
+            </p>
+            <p>To do this, select the java version and click on uninstall. Repeat this process until all older java
+                installations are removed, once done, you can proceed to the next lesson.</p>
+
+            <h3>On Ubuntu</h3>
+            <p>We are explaining how you can do same steps in linux, based on Ubuntu distribution. These steps are
+                applicable
+                both Ubuntu version 18.04 and 20.04. Open your terminal and try executing the following statements to
+                verify
+                whether the JDK is installed or not.</p>
+
+            <pre style="margin-bottom: 10px;"><code class="language-java">javac --version</code></pre>
+
+            <p>If you get a response with the version number and it looks somewhat like the following output, it means
+                you
+                have
+                Java SDK installed.</p>
+
+
+            <pre style="margin-bottom: 10px;"><code class="language-java">javac 11.0.7</code></pre>
+
+            <p>Look at version above, 11. This version is known as <code>Java 11</code></p>
+
+            <p>If you get an warning message like the following one, you haven't setup java and you should follow this
+                course.
+            </p>
+            <pre style="margin-bottom: 10px;"><code class="language-jv">javac --version
+
+Command 'javac' not found, but can be installed with:
+
+sudo apt install openjdk-11-jdk-headless  # version 11.0.9+11-0ubuntu1~20.04, or
+sudo apt install default-jdk              # version 2:1.11-72
+sudo apt install ecj                      # version 3.16.0-1
+sudo apt install openjdk-8-jdk-headless   # version 8u272-b10-0ubuntu1~20.04
+sudo apt install openjdk-13-jdk-headless  # version 13.0.4+8-1~20.04
+sudo apt install openjdk-14-jdk-headless  # version 14.0.2+12-1~20.04</code></pre>
+
+            <p>If you have older version than version <code>Java 8</code>, we recommend you to set version 8 as an
+                default
+                version. We will be explaining following lessons how to manage your Java versions.</p>
+        </div>
+    </main>
+</body>
+
+</html>

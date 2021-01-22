@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ttlacademy.github.io/assets/prism2.js"></script>
+    <link href="https://ttlacademy.github.io/assets/prism2.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Data Structure Exercises</title>
+</head>
+
+<body>
+    <style>
+        .accordion {
+            position: relative;
+            margin: 2px;
+            max-width: 80vw;
+        }
+
+        .accordion input[type=checkbox] {
+            display: none;
+        }
+
+        * only checkbox-label*/ .accordion input {
+            display: none;
+            /*regular checkbox will not be visible*/
+        }
+
+        .accordion label {
+            display: block;
+            background: #2c3e50;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .accordion label::after {
+            content: "\25b6";
+            /*ASCII code, ths is small arrow   \039e hamburger menu*/
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            display: block;
+            transition: all 0.6s;
+        }
+
+        .accordion input[type=checkbox]:checked+label::after {
+            transform: rotate(90deg);
+            /*Always start counter clock (first right)*/
+        }
+
+        /* Description itself */
+        .accordion_content {
+            overflow: hidden;
+            /*key line is here Be careful, Game Rules still there but overflow closed.*/
+            background: #ccdef9;
+            transition: max-height 0.6s;
+            max-height: 0;
+        }
+
+        .accordion_content p {
+            margin: 10px;
+        }
+
+        .accordion input:checked~.accordion_content {
+            max-height: 100vh;
+            /*suddenly we change height then it will be visible because overflow now open*/
+        }
+    </style>
+
+    <h3>Exercise - Order The Numbers</h3>
+
+    <p>Create a program that reads integers from the user till a blank line is entered. When
+        program read all numbers it should display all of the negative
+        numbers, followed by all of the zeros, followed by all of the positive numbers inside a list.
+    </p>
+
+
+    <div class="accordion"><input id="tab-1" name="tab" type="checkbox" />
+        <label for="tab-1">Exercise - Order The Numbers Possible Solution!</label>
+        <div class="accordion_content" style="margin-top: -30px;">
+            <pre class="line-numbers" style="margin-bottom: 10px;"><code class="language-python"># Create an empty list to store entered numbers
+numbers = []
+
+# Read value from user
+number = input("Please enter an integer - (just enter to exit)")
+
+#As long as user enters the integer keep going;
+while number != "":
+    num = int(number)
+    numbers.append(num)
+    #Ask user for the next number
+    number = input("Please enter an integer - (just enter to exit)")
+
+numbers.sort()
+print(numbers) </code></pre>
+        </div>
+    </div>
+
+
+    <h3>Exercise - Change Tuple</h3>
+
+    <p>Write a program to change last value in the given tuple with given value. Then print new series to
+        screen. For example given tuple is my_tuple = (40, 50, 60,70) and given value is "nut_number" the print
+        should be should be (40, 50, 60, "not number").
+    </p>
+    <div class="accordion"><input id="tab-2" name="tab" type="checkbox" />
+        <label for="tab-2">Exercise - Order The Numbers Possible Solution!</label>
+        <div class="accordion_content" style="margin-top: -30px;">
+
+            <pre class="line-numbers" style="margin-bottom: 10px;"><code class="language-python">#Given tuple
+t = (40, 50, 60)
+
+# First Slice last value and add new value as an new tuple (concatanate)
+print(t[:-1] + ("not_number",))</code></pre>
+        </div>
+    </div>
+
+    <h3>Exercise - Convert to Tuple</h3>
+
+    <p>Write a program that can convert a given string to a tuple then print it. For example given string is my_string =
+        "Hello ttl.be" then the tuple should be ('H', 'e', 'l', 'l', 'o', ' ', 't', 't', 'l', '.', 'b', 'e').</p>
+    <div class="accordion"><input id="tab-3" name="tab" type="checkbox" />
+        <label for="tab-3">Exercise - Order The Numbers Possible Solution!</label>
+        <div class="accordion_content" style="margin-top: -30px;">
+
+            <pre class="line-numbers" style="margin-bottom: 10px;"><code class="language-python"># First Given String
+str = "Hello ttl.be"
+
+# Convert str to tuple
+my_tuple = tuple(chr for chr in str) 
+
+print("Converted tuple is: ") 
+print(my_tuple)</code></pre>
+        </div>
+    </div>
+
+</body>
+
+</html>
