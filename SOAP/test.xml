@@ -1,0 +1,27 @@
+<string xmlns="https://ttl.be/webservices">
+    <Users>
+        <User>
+            <firstName>ilhan</firstName>
+            <lastName>koral</lastName>
+            <email>i.k@ttl.be</email>
+            <company> ttl</company>
+        </User>
+        <User>
+            <firstName>peter</firstName>
+            <lastName>lessen</lastName>
+            <email>p@ttl.be</email>
+            <company></company>
+        </User>
+        <User>
+            <firstName>admin</firstName>
+            <lastName>SOAP_DB</lastName>
+            <email>admin@ttl.soap</email>
+        </User>
+        <User>
+            <firstName>Bruce</firstName>
+            <lastName>Wayne</lastName>
+            <email>batman@dccomics.test</email>
+            <company>dc</company>
+        </User>
+    </Users>
+</string>
