@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.1 solution</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="mx-10 my-10 text-lg">
+    <h2 class="mb-4 font-medium">Exercise 4.1: Pilot & deployment guidelines sample solution.</h2>
+    <table style="width:100%; border: 1px solid #000;">
+        <tbody>
+            <tr style="border: 1px solid #000;">
+                <td style="background: teal; color:#fff; padding:5px; border: 1px solid #000;">Learning Objective</td>
+                <td style="padding:5px; border: 1px solid #000;">ALTA-E 4.1.1 (K3) Apply guidelines that support
+                    effective test tool pilot and deployment activities.</td>
+            </tr>
+            <tr style="border: 1px solid #000;">
+                <td style="background: teal; color:#fff; padding:5px;border: 1px solid #000;">Version</td>
+                <td style="padding:5px;border: 1px solid #000;">1.1</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ol class="list-decimal mx-16 my-4">
+        <li>
+            <p>Identify a suitable pilot project. State why you think it is the best project to select as a pilot.</p>
+            <p class="my-6">Group A is probably the best candidate for a pilot project: </p>
+            <ul class="list-disc mx-16 my-4">
+                <li>Applications don't need to be changed.</li>
+                <li>Defect tracker (Jira) is the same, so only small integration issues need to be resolved.</li>
+                <li>Development is different (SVN vs GitHub, Java vs PHP, Eclipse vs Visual Studio). These differences
+                    warrant the effort to have a full pilot.</li>
+            </ul>
+            <p>Group B is just formed, without developers, so all development work would rest on your shoulders. This
+                may include setting up the defect tracker, etc.</p>
+            <p>Group C wants a complete rewrite of your applications, so this would not be a pilot project, but the
+                creation of a new TAS.</p>
+        </li>
+
+        <li class="my-10">
+            <p>In short: pilot will be successful when Group A will be able to test their application with minimal extra
+                effort</p>
+            <p>More detailed:</p>
+            <ul class="list-disc mx-16 my-4">
+                <li>TAS is adapted for their processes and tools where needed.</li>
+                <li>The tester can easily write test cases in the TAS.</li>
+                <li>Tests run automated at least once per day with minimal effort.</li>
+            </ul>
+        </li>
+
+        <li class="my-10">
+            <p>Sequence of projects to deploy your TAS.</p>
+            <p>Group A > Group B > Group C </p>
+        </li>
+
+        <li class="my-10">
+            <p>Focus points and success factors for each subsequent deployment.</p>
+            <p>Group A: see answer 2</p>
+            <p>Group B:</p>
+            <ul class="list-disc mx-16 my-4">
+                <li>Focus on the rewrite of the webservice, extend TAS to accommodate the added functionality.</li>
+                <li>Integration with defect tracker.</li>
+                <li>Make sure to keep up with the new developments.</li>
+            </ul>
+            <p>Group C:</p>
+            <ul class="list-disc mx-16 my-4">
+                <li>Since Group C plans to rewrite the webservice and WebApp, the only focus may be MailingApp and
+                    Admin.</li>
+                <li>You should make sure you are involved when Group C starts to select a development environment, to
+                    make sure the TAS fits with minimal effort.</li>
+            </ul>
+        </li>
+    </ol>
+
+</body>
+
+</html>

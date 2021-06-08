@@ -1,27 +1,40 @@
 <string xmlns="https://ttl.be/webservices">
     <Users>
-        <User>
-            <firstName>ilhan</firstName>
-            <lastName>koral</lastName>
-            <email>i.k@ttl.be</email>
-            <company> ttl</company>
-        </User>
-        <User>
-            <firstName>peter</firstName>
-            <lastName>lessen</lastName>
-            <email>p@ttl.be</email>
-            <company></company>
-        </User>
-        <User>
-            <firstName>admin</firstName>
-            <lastName>SOAP_DB</lastName>
-            <email>admin@ttl.soap</email>
-        </User>
-        <User>
-            <firstName>Bruce</firstName>
-            <lastName>Wayne</lastName>
-            <email>batman@dccomics.test</email>
+        <warning>The passwords hashs are displayed here for training purposes. Otherwise it compromises security.</warning>
+        <LoggedInUser>admin@soap.test</LoggedInUser>
+        <Token>ed51edef-c525-4cef-af9a-63a8209c6e81</Token>
+        <RoleId>1 </RoleId>
+        <User id="13">
+            <email>flash@dc.test</email>
+            <password>FMHWFnGJmgnLkDPRjiadt1wMcCqNdid4YUC+QR8v0u8=</password>
+            <firstName>Barry</firstName>
+            <lastName>Allen</lastName>
             <company>dc</company>
+            <roleid>2</roleid>
+        </User>
+        <User id="18">
+            <email>admin@soap.test</email>
+            <password>XPlRlvTx8+Uh/SwMJkn4Sx4NocYAszaT/4jWsS0uHbU=</password>
+            <firstName>Soap</firstName>
+            <lastName>Admin</lastName>
+            <company>ttl.be</company>
+            <roleid>1</roleid>
+        </User>
+        <User id="20">
+            <email>wouter.goris@ttl.be</email>
+            <password>kjLjB3VW3blvn+5YwakZGwzVj1bu5Sgd9Nee48WnFaE=</password>
+            <firstName>Wouter</firstName>
+            <lastName>Goris</lastName>
+            <company> </company>
+            <roleid>2</roleid>
+        </User>
+        <User id="21">
+            <email>superman@dc.test</email>
+            <password>EeXt7JHiOnndwj1di3YHPNMf/gM34R2+4jrUPRY1bNI=</password>
+            <firstName>Clark</firstName>
+            <lastName>Kent</lastName>
+            <company>dc</company>
+            <roleid>2</roleid>
         </User>
     </Users>
 </string>

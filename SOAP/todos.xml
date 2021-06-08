@@ -1,0 +1,37 @@
+<string xmlns="https://ttl.be/webservices">
+    <Todos>
+        <LoggedInUser>admin@soap.test</LoggedInUser>
+        <Token>fcfd3f5d-74c0-4d44-8dd2-2d1491caab92</Token>
+        <RoleId>1 </RoleId>
+        <Todo id="8">
+            <todo>Get away from crypton.</todo>
+            <status>0</status>
+            <userName>Clark Kent</userName>
+            <email>superman@dc.test</email>
+        </Todo>
+        <Todo id="6">
+            <todo>Meet Batman at 18.00</todo>
+            <status>1</status>
+            <userName>Barry Allen</userName>
+            <email>flash@dc.test</email>
+        </Todo>
+        <Todo id="4">
+            <todo>Catch me if you can Superman!</todo>
+            <status>0</status>
+            <userName>Barry Allen</userName>
+            <email>flash@dc.test</email>
+        </Todo>
+        <Todo id="3">
+            <todo>Save people from lava</todo>
+            <status>1</status>
+            <userName>Barry Allen</userName>
+            <email>flash@dc.test</email>
+        </Todo>
+        <Todo id="1">
+            <todo>Catch the Reverse Flash</todo>
+            <status>1</status>
+            <userName>Barry Allen</userName>
+            <email>flash@dc.test</email>
+        </Todo>
+    </Todos>
+</string>

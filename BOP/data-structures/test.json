@@ -1,0 +1,61 @@
+{
+    "id": "147",
+    "urunKodu": "1147",
+    "aciklama": "",
+    "cikisTL": "0",
+    "onsiparis": "0",
+    "tarih": "2020-12-12",
+    "renk": "Desenli",
+    "fav": "0",
+    "resimler": [
+        {
+            "b_resim": "147-2021-02-25-23-26-09.jpeg",
+            "k_resim": ""
+        },
+        {
+            "b_resim": "147-2021-02-25-23-26-26.jpeg",
+            "k_resim": ""
+        },
+        {
+            "b_resim": "147-2021-02-25-23-26-35.jpeg",
+            "k_resim": ""
+        },
+        {
+            "b_resim": "147-2021-02-25-23-26-45.jpeg",
+            "k_resim": ""
+        },
+        {
+            "b_resim": "147-2021-02-25-23-26-54.jpeg",
+            "k_resim": ""
+        },
+        {
+            "b_resim": "147-2021-02-25-23-27-03.jpeg",
+            "k_resim": ""
+        },
+        {
+            "b_resim": "147-2021-02-25-23-27-13.jpeg",
+            "k_resim": ""
+        },
+        {
+            "b_resim": "147-2021-02-25-23-27-26.jpeg",
+            "k_resim": ""
+        }
+    ],
+    "stok": [
+        {
+            "beden": "S",
+            "miktar": "5"
+        },
+        {
+            "beden": "XL",
+            "miktar": "6"
+        }
+    ],
+    "renkler": [
+        {
+            "urunID": "147",
+            "renk": "Desenli",
+            "b_resim": "147-2021-02-25-23-26-09.jpeg"
+        }
+    ]
+}
